@@ -1,0 +1,28 @@
+<template>
+    <div class="sp-form-group">
+        <label class="sp-label">{{ label }}</label>
+        <input class="sp-form-control" @input="onInput"  :placeholder="placeholder" type="text">
+    </div>
+</template>
+
+<script>
+
+export default {
+    props: {
+        label: {
+            default: '',
+            type: String
+        },
+        placeholder: {
+            default: '',
+            type: String
+        }
+    },
+
+    methods: {
+        onInput(event) {
+            this.$emit('textField', event.target.value)
+        }
+    }
+}
+</script>

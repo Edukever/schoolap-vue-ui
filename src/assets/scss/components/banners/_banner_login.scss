@@ -1,0 +1,51 @@
+.sp-banner-login {
+    background: $gradient-blue;
+    border-radius: 5px;
+    margin: 60px;
+    box-shadow: 0px 4px 30px 0px #42A7C680;
+    height: 800px;
+    width: auto;
+
+    .sp-vector {
+        position: absolute;
+        margin-left: -30px;
+    }
+
+    .sp-vector-rotate {
+        transform: rotate(-190deg);
+        position: absolute;
+        margin-top: -283px;
+        margin-left: -159PX;
+    }
+
+
+    .sp-logo {
+
+        margin-top: 30px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .sp-title {
+        font-size: 20px;
+        text-align: left;
+        color: white;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-weight: 600;
+        margin-left: 20px;
+        line-height: 30px;
+        font-family: $font-family-sans-serif;
+    }
+
+    .sp-fill {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .sp-mask-group {
+        position: relative;
+        margin-left: 105px;
+
+    }
+}

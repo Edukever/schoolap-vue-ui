@@ -1,0 +1,89 @@
+// Body
+$body-bg-white: #ffffff;
+
+
+//variation colors
+$color-red: #FF5050 !default;
+$color-red-light: #FFE1E1 !default;
+$color-noir: #292D32 !default;
+$color-gris-3: #4E4E4E !default;
+$color-gris-2: #ABABAB !default;
+$color-gris-1: #ABABAB !default;
+$color-gris-light: #F6F6F6 !default;
+$color-blanc: #F6F6F6 !default;
+$color-vert: #1FAA52 !default;
+$color-vert-light: #DDF3D6 !default;
+$color-bleu: #41A3DF !default;
+$color-bleu-1: #AEDAEE !default;
+$color-bleu-light: #E5F9FF !default;
+$color-jaune: #F2B200 !default;
+$color-jaune-light: #FFF4D8 !default;
+$color-orange: #F68C2C !default;
+$color-orange-1: #FFB391 !default;
+$color-orange-light: #FFF2EC !default;
+
+$colors:(
+  "red":        $color-red,
+  "red-light":  $color-red-light,
+  "noir":       $color-noir,
+  "gris-3":     $color-gris-3,
+  "gris-2":     $color-gris-2,
+  "gris-1":     $color-gris-1,
+  "gris-light": $color-gris-light,
+  "blanc":      $color-blanc,
+  "vert":       $color-vert,
+  "vert-light": $color-vert-light,
+  "bleu":       $color-bleu,
+  "bleu-1":     $color-bleu-1,
+  "bleu-light": $color-bleu-light,
+  "jaue":       $color-jaune,
+  "jaune-light": $color-jaune-light,
+  "orange":      $color-orange,
+  "orange-1":    $color-orange-1,
+  "orange-light": $color-orange-light,
+)!default;
+
+// Linear gradient
+$gradient-blue: linear-gradient(360deg, #3F97E3 0%, #43B5D7 100%);
+
+
+// Typograghy
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+
+/***** Font weight *****/
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-medium-xl:       600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-medium-bold :    800 !default;
+$font-weight-bolder:          bolder !default;
+$font-weight-base:            $font-weight-normal !default;
+
+$font-weights:(
+    "lighter" : $font-weight-lighter,
+    "light": $font-weight-light,
+    "normal" :$font-weight-normal,
+    "medium" : $font-weight-medium,
+    "medium-xl" : $font-weight-medium-xl,
+    "bold" :$font-weight-bold,
+    "bolder" :$font-weight-bolder,
+    "bolder-title" : $font-weight-medium-bold
+)!default;
+
+
+/***** Button *****/
+$enable-button-pointers:      true !default;
+$btn-padding-y :              .375rem !default;
+$btn-padding-x :               1.5rem !default;
+$link-hover-decoration:        null !default;
+
+
+
+
+
+  

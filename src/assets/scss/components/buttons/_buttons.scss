@@ -1,0 +1,87 @@
+.sp-btn {
+    display: flex;
+    line-height: 10px;
+    color: white;
+    text-align: center;
+    text-decoration:none;
+    white-space: null;
+    vertical-align: middle;
+    font-family: $font-family-sans-serif;
+    cursor: if($enable-button-pointers, pointer, null);
+    font-size: 14px;
+    border-radius: 8px;
+    user-select: none;
+    background-color: $color-orange;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 35px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 15px;
+
+    .title {
+        font-weight: 570;
+
+    }
+    .title-left {
+        font-weight: 550;
+        margin-left: 1px;
+    }
+
+    .svg-right {
+        margin-left: 6px;
+    }
+
+    &:hover {
+        color: $color-orange;
+        background: $color-orange-light;
+
+        .svg-left svg path {
+            stroke: $color-orange;
+        }
+
+        .svg-right svg path{
+            stroke: $color-orange; 
+        }
+    }
+}
+
+.sp-btn-back {
+    display: flex;
+    line-height: 10px;
+    color: $color-orange;
+    text-align: center;
+    text-decoration:none;
+    white-space: null;
+    vertical-align: middle;
+    font-family: $font-family-sans-serif;
+    cursor: if($enable-button-pointers, pointer, null);
+    font-size: 14px;
+    border-radius: 8px;
+    user-select: none;
+    background-color: white;
+    border: 1px solid $color-orange;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 35px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 15px;
+
+    .title-left {
+        font-weight: 570;
+    }
+
+    .svg-left svg path {
+        stroke: $color-orange;
+    }
+    .title-google {
+        font-size: 16px;
+        color: $color-noir;
+    }
+}
