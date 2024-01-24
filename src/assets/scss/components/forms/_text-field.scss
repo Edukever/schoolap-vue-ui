@@ -1,0 +1,141 @@
+.sp-label {
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.sp-form-control {
+    border: 1px solid $color-gris-2;
+    height: 45.9px;
+    font-weight: 450;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: -0.149625px;
+    border-radius: 0.62em;
+    outline: none;
+    padding: 13px;
+    margin: auto;
+    width: 100%;
+    color: $color-noir;
+    
+    &::placeholder {
+        font-size: 13px;
+        color: $color-gris-2;
+    }
+
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+
+    .sp-form-control {
+        padding-left: 30px; 
+        padding-right: 10px; 
+        border: 1px solid $color-noir;
+        border-radius: 5px;
+        height: 45.9px;
+        font-weight: 450;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: -0.149625px;
+        border-radius: 0.95em;
+        outline: none;
+        margin: auto;
+        width: 100%;
+        color: $color-noir;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .icon {
+        position: absolute;
+        color: $color-gris-2;
+        left: 10px; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.sp-form-icon {
+    position: relative;
+    display: flex;
+
+    .sp-form-control {
+        padding-left: 30px; 
+        padding-right: 10px; 
+        border: 1px solid $color-gris-2;
+        border-radius: 5px;
+        height: 45.9px;
+        font-weight: 450;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: -0.149625px;
+        border-radius: 0.95em;
+        outline: none;
+        margin: auto;
+        width: 100%;
+        color: $color-noir;
+    }
+
+    .icon {
+        position: absolute;
+        color: $color-gris-2;
+        left: 10px; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.sp-form-textarea {
+    @extend .sp-form-control;
+    resize: none;
+    height: 150px;
+}
+
+.sp-form-password {
+
+
+    input[type="password"] {
+        border: 1px solid $color-gris-2;
+        height: 45.9px;
+        font-weight: 450;
+        font-size: 12px;
+        line-height: 25px;
+        letter-spacing: -0.149625px;
+        border-radius: 0.62em;
+        outline: none;
+        padding: 13px;
+        margin: auto;
+        width: 100%;
+        color: $color-noir;
+    }
+    /* suppress IE >= 10 native functionality that can show password */
+    input[type="password"]::-ms-reveal {
+    display: none;
+    }
+    .btn {
+    margin-top: 1.75em;
+    }
+    .input-group {
+        position: relative;
+        width: 100%;
+    }
+    .toggle {
+        background: none;
+        border: none;
+        color: $color-noir;
+        font-weight: 600;
+        position: absolute;
+        right: .75em;
+        top: 2.25em;
+        z-index: 9;
+    }
+
+    .fa {
+    font-size: 2rem;
+    }
+}
