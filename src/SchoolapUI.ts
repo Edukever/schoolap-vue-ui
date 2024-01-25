@@ -10,6 +10,7 @@ import SPSearchBar from './components/forms/inputs/SPSearchBar.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPTextField from './components/forms/inputs/SPTextField.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
+import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
 
 import './assets/scss/main.scss'
 
@@ -26,8 +27,9 @@ const SchoolapUI = {
     app.component('sp-radio', SPRadio)
     app.component('sp-search-bar', SPSearchBar)
     app.component('sp-textarea', SPTextarea)
-    app.component('sp-textField', SPTextField)
-    app.component('sp-textFieldIcon', SPTextFieldIcon)
+    app.component('sp-text-field', SPTextField)
+    app.component('sp-text-field-icon', SPTextFieldIcon)
+    app.component('sp-password-field', SPPasswordField)
   }
 }
 
