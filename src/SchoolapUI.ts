@@ -11,6 +11,8 @@ import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPTextField from './components/forms/inputs/SPTextField.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 
+import './assets/scss/main.scss'
+
 interface SchoolapUIPluginOptions {}
 
 const SchoolapUI = {
