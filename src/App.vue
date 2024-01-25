@@ -2,7 +2,8 @@
 
 <template>
 
-  <br>
+  <SPPasswordField :placeholder="'12344567'" :label="'Mot de passe'"></SPPasswordField>
+  <br> 
   <SPBannerLogin 
     :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
   </SPBannerLogin>
@@ -85,6 +86,7 @@ import SPCheckBox from './components/forms/checkBox/SPCheckBox.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
+import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
 
 export default {
 
@@ -101,7 +103,8 @@ export default {
       SPTextFieldIcon,
       SPTextarea,
       SPButtonGoogle,
-      SPBannerLogin
+      SPBannerLogin,
+      SPPasswordField
     }
 }
 </script>

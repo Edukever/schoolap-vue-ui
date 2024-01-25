@@ -7,7 +7,7 @@
     border: 1px solid $color-gris-2;
     height: 45.9px;
     font-weight: 450;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 25px;
     letter-spacing: -0.149625px;
     border-radius: 0.62em;
@@ -21,7 +21,6 @@
         font-size: 13px;
         color: $color-gris-2;
     }
-
 }
 
 .search-container {
@@ -35,7 +34,7 @@
         border-radius: 5px;
         height: 45.9px;
         font-weight: 450;
-        font-size: 12px;
+        font-size: 20px;
         line-height: 25px;
         letter-spacing: -0.149625px;
         border-radius: 0.95em;
@@ -71,7 +70,7 @@
         border-radius: 5px;
         height: 45.9px;
         font-weight: 450;
-        font-size: 12px;
+        font-size: 20px;
         line-height: 25px;
         letter-spacing: -0.149625px;
         border-radius: 0.95em;
@@ -97,45 +96,26 @@
 }
 
 .sp-form-password {
+    position: relative;
+    width: 100%;
 
-
-    input[type="password"] {
-        border: 1px solid $color-gris-2;
-        height: 45.9px;
-        font-weight: 450;
-        font-size: 12px;
-        line-height: 25px;
-        letter-spacing: -0.149625px;
-        border-radius: 0.62em;
-        outline: none;
-        padding: 13px;
-        margin: auto;
-        width: 100%;
-        color: $color-noir;
-    }
-    /* suppress IE >= 10 native functionality that can show password */
+   
     input[type="password"]::-ms-reveal {
-    display: none;
+        display: none;
     }
-    .btn {
-    margin-top: 1.75em;
-    }
-    .input-group {
-        position: relative;
-        width: 100%;
-    }
+    
     .toggle {
         background: none;
         border: none;
         color: $color-noir;
         font-weight: 600;
         position: absolute;
-        right: .75em;
-        top: 2.25em;
+        right: .95em;
+        top: 3.70em;
         z-index: 9;
     }
 
-    .fa {
-    font-size: 2rem;
+    svg path {
+        stroke: $color-noir;
     }
 }
