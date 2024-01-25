@@ -184,7 +184,7 @@
 
 <script>
 export default {
-
+    name: 'SPBannerLogin',
     props: {
         title: {
             type: String

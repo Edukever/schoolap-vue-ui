@@ -15,6 +15,7 @@
 <script>
 
 export default {
+    name: 'SPButtonBack',
     props: {
         title: String,
         position: {

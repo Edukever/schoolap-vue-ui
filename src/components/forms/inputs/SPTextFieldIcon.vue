@@ -11,6 +11,7 @@
 <script>
 
 export default {
+    name: 'SPSearchBar',
     props: {
         icon: {
             type: String

@@ -7,6 +7,7 @@
 <script>
 
 export default {
+    name: 'SPButtonGoogle',
     props: {
         title: String,
     },

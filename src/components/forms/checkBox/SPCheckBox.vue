@@ -11,7 +11,7 @@
 
 <script>
 export default {
-
+    name: 'SPCheckBox',
     props: {
         label: {
             type: String

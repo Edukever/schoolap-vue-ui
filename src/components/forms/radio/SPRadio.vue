@@ -8,7 +8,7 @@
 
 <script>
 export default {
-
+    name: 'SPSearchBar',
     props: {
         placeholder: {
             type: String

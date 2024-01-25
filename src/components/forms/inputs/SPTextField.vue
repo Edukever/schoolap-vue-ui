@@ -8,6 +8,7 @@
 <script>
 
 export default {
+    name: 'SPSearchBar',
     props: {
         label: {
             default: '',
