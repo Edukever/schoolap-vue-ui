@@ -2,7 +2,7 @@
 
 <template>
       
-  <!-- <SPBannerLogin 
+  <SPBannerLogin 
     :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
   </SPBannerLogin>
 
@@ -63,7 +63,7 @@
   <SPTextarea :label="'Commentaire'" :placeholder="'Ajouter une commentaire par rapport à l’absence de votre apprenants '">
   </SPTextarea>
 
-  <br> -->
+  <br>
 </template>
 
 
