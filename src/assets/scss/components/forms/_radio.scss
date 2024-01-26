@@ -1,5 +1,10 @@
 .sp-form-radio {
   margin: 0.5rem;
+
+  .radio-label {
+    font-size: 13px;
+  }
+
   input[type="radio"] {
     position: absolute;
     opacity: 0;

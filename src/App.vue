@@ -1,10 +1,8 @@
 
 
 <template>
-
-  <SPPasswordField :placeholder="'12344567'" :label="'Mot de passe'"></SPPasswordField>
-  <br> 
-  <SPBannerLogin 
+      
+  <!-- <SPBannerLogin 
     :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
   </SPBannerLogin>
 
@@ -65,9 +63,7 @@
   <SPTextarea :label="'Commentaire'" :placeholder="'Ajouter une commentaire par rapport à l’absence de votre apprenants '">
   </SPTextarea>
 
-  <br>
-
-  
+  <br> -->
 </template>
 
 
@@ -90,22 +86,22 @@ import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
 
 export default {
 
-    components: {
-      HelloWorld,
-      TheWelcome,
-      SPButtonPrimary,
-      SPButtonBack,
-      SPButtonIcon,
-      SPTextField,
-      SPSearchBar,
-      SPRadio,
-      SPCheckBox,
-      SPTextFieldIcon,
-      SPTextarea,
-      SPButtonGoogle,
-      SPBannerLogin,
-      SPPasswordField
-    }
+  components: {
+    HelloWorld,
+    TheWelcome,
+    SPButtonPrimary,
+    SPButtonBack,
+    SPButtonIcon,
+    SPTextField,
+    SPSearchBar,
+    SPRadio,
+    SPCheckBox,
+    SPTextFieldIcon,
+    SPTextarea,
+    SPButtonGoogle,
+    SPBannerLogin,
+    SPPasswordField
+  }
 }
 </script>
 
