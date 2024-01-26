@@ -1,13 +1,14 @@
 .sp-label {
     font-weight: 600;
     line-height: 40px;
+    font-size: 15px;
 }
 
 .sp-form-control {
-    border: 1px solid $color-gris-2;
+    border: 1.29px solid $color-gris-2;
     height: 45.9px;
     font-weight: 450;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 25px;
     letter-spacing: -0.149625px;
     border-radius: 0.62em;
@@ -18,7 +19,7 @@
     color: $color-noir;
     
     &::placeholder {
-        font-size: 13px;
+        font-size: 15px;
         color: $color-gris-2;
     }
 }
