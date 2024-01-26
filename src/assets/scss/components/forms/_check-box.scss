@@ -1,7 +1,10 @@
 .sp-form-radio {
+  .sp-label-box {
+    color: $color-gris-2;
+  }
   input[type=checkbox] {
     position: relative;
-    border: 1px solid #000;
+    border: 1px solid $color-gris-2;
     border-radius: 2px;
     background: none;
     cursor: pointer;
