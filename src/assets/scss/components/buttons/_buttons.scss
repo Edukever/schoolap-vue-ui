@@ -1,6 +1,6 @@
 .sp-btn {
     display: flex;
-    line-height: 10px;
+    line-height: 26.97px;
     color: white;
     text-align: center;
     text-decoration:none;
@@ -8,7 +8,7 @@
     vertical-align: middle;
     font-family: $font-family-sans-serif;
     cursor: if($enable-button-pointers, pointer, null);
-    font-size: 14px;
+    font-size: 17.98px;
     border-radius: 10px;
     user-select: none;
     background-color: $color-orange;
@@ -21,6 +21,7 @@
     justify-content: center;
     position: relative;
     gap: 15px;
+    font-weight: 600;
 
     .title {
         font-weight: 570;
