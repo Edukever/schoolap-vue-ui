@@ -1,11 +1,41 @@
 
 
-<template>
-  
+<template>  
+
+ <SPSelect :placeholder="'Saississez'" :options="list"></SPSelect>
   <SPModalRight :welcome="'Bienvenue Merdi!'" 
     :sucessfully_message="'Votre compte à été crée avec succès'"
-    :message="'Vous pouvez désormais accéder à votre espace sur Schoolap et le paramétrer.  '">
+    :message="'Vous pouvez désormais accéder à votre espace sur Schoolap et le paramétrer.'">
   </SPModalRight>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <SPBannerWelcome 
+      :welcome="'Bienvenue Meschack !'" 
+      :description="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'" 
+      :src="'/src/assets/img/icons/welcome.svg'" />
+  <br>
+  <br>
+  <hr>
+  <div class="row">
+     <div class="col-md-6">
+        <SPStat
+          :title="'Personnel'"
+          :description="'Ajouter un personnel'" 
+          :counter="12"
+          :img_button_action="'/src/assets/img/icons/plus.svg'"  
+          :svg="'/src/assets/img/icons/user.svg'" />  
+     </div>
+     <div class="col-md-6">
+        <SPStat
+          :title="'Elèves'"
+          :description="'Ajouter un élève'" 
+          :img_button_action="'/src/assets/img/icons/plus.svg'"  
+          :svg="'/src/assets/img/icons/user.svg'" />  
+     </div>
+  </div>
   <!-- <SPBannerLogin 
     :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
   </SPBannerLogin>
@@ -85,9 +115,12 @@ import SPRadio from './components/forms/radio/SPRadio.vue'
 import SPCheckBox from './components/forms/checkBox/SPCheckBox.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
+import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
 import SPModalRight from './components/modal/SPModalRight.vue'
+import SPBannerWelcome from './components/banners/SPBannerWelcome.vue'
+import SPStat from './components/cards/SPStat.vue'
 
 export default {
 
@@ -106,7 +139,25 @@ export default {
     SPButtonGoogle,
     SPBannerLogin,
     SPPasswordField,
-    SPModalRight
+    SPModalRight,
+    SPBannerWelcome,
+    SPStat,
+    SPSelect
+  },
+
+  data() {
+    return {
+      list: [
+          {
+            value: 1,
+            label: 'Français'
+          },
+          {
+            value: 2,
+            label: 'Anglais'
+          },
+      ]
+    }
   }
 
 }

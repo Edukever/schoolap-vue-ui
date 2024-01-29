@@ -1,0 +1,36 @@
+.sp-banner-welcome {
+    background: $color-bleu-light;
+    height: 155px;
+    border-radius: 15.92px;
+    display: flex;
+    // align-content: space-between;
+    
+    .bloc_one {
+        padding: 30px;
+        padding-bottom: 0px;
+    }
+
+    img {
+        width: 215px; 
+        height: 320px;
+    }
+
+    .welcome {
+        font-weight: 650;
+        font-size: 24px;
+        color: $color-noir;
+        font-family: $font-family-sans-serif;
+    }
+    
+    .paragraph {
+        font-size: 12px;
+        font-weight: 400;
+        color: $color-noir;
+        font-family: $font-family-sans-serif;
+    }
+
+    .bloc_two {
+        margin-top: -106.70px;
+    }
+
+}
