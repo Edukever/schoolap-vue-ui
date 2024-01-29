@@ -1,0 +1,52 @@
+.sp-modal-right {
+    background: white;
+    border-radius: 55px 0px 0px 55px;
+    height: 700px;
+    width: 410px;
+
+    .svg {
+        padding: 20px;
+        margin-top: 130px;
+        margin-left: 20px;
+
+        h2 {
+            color: $color-noir;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 48px;
+            font-family: $font-family-sans-serif;
+            margin-top: 15px;
+        }
+
+        .successful-message {
+            color: $color-noir;
+            line-height: 25px;
+            font-weight: 550;
+            font-size: 18px;
+        }
+
+        .message {
+            @extend .successful-message;
+            font-weight: 320;
+            font-size: 20px;
+        }
+
+    }
+
+    .sp-button-position {
+        padding: 5px;
+        width: 300px;
+    }
+
+    .paragraph {
+        @extend .sp-button-position;
+        font-size: 12.20px;
+        color:  $color-noir;
+        padding: 20px;
+        margin-left: 25px;
+        text-align: center;
+        margin-top: -42px;
+        text-align: center;
+    }
+    
+}

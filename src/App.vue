@@ -1,7 +1,11 @@
 
 
 <template>
-      
+  
+  <SPModalRight :welcome="'Bienvenue Merdi!'" 
+    :sucessfully_message="'Votre compte à été crée avec succès'"
+    :message="'Vous pouvez désormais accéder à votre espace sur Schoolap et le paramétrer.  '">
+  </SPModalRight>
   <!-- <SPBannerLogin 
     :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
   </SPBannerLogin>
@@ -83,6 +87,7 @@ import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
+import SPModalRight from './components/modal/SPModalRight.vue'
 
 export default {
 
@@ -100,8 +105,10 @@ export default {
     SPTextarea,
     SPButtonGoogle,
     SPBannerLogin,
-    SPPasswordField
+    SPPasswordField,
+    SPModalRight
   }
+
 }
 </script>
 
