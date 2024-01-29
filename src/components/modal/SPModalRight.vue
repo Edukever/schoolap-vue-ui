@@ -53,9 +53,9 @@
 <path d="M92.5479 73.0281L98.6264 79.2308L111.162 66.8804" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
 <path d="M211 136.594H10.5537V137.723H211V136.594Z" fill="#696C6D"/>
             </svg>
-            <h2>{{ welcome }}</h2>
-            <p class="successful-message">
-               {{ sucessfully_message  }}</p>
+            <h2 class="welcome">{{ welcome }}</h2>
+            <div class="successful-message">
+               {{ sucessfully_message  }}</div>
             <p class="message">
                {{ message }} 
             </p>
