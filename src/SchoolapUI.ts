@@ -11,6 +11,7 @@ import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPTextField from './components/forms/inputs/SPTextField.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
+import SPModalRight from './components/modal/SPModalRight.vue'
 
 import './assets/scss/main.scss'
 
@@ -30,6 +31,7 @@ const SchoolapUI = {
     app.component('sp-text-field', SPTextField)
     app.component('sp-text-field-icon', SPTextFieldIcon)
     app.component('sp-password-field', SPPasswordField)
+    app.component('sp-modal-right', SPModalRight)
   }
 }
 
