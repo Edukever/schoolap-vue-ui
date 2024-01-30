@@ -5,26 +5,27 @@
         </div>
         <h3 class="sp-title">{{ title }}</h3>
         <div class="sp-div-btn">
-            <SPButtonPrimary class="sp-btn-bleu" :title="'Ajouter un personnel'">
-            </SPButtonPrimary>
+            <SPButtonIcon class="sp-btn-bleu" :src="'/src/assets/img/icons/group-plus.svg'" :position="'left'" :title="action">
+            </SPButtonIcon>
         </div>
     </div>
 </template>
 
 <script>
-import SPButtonPcrimary from '../buttons/SPButtonPrimary.vue'
+import SPButtonIcon from '../buttons/SPButtonIcon.vue'
 
 export default {
 
     name: 'SPCardActivity',
 
     components: {
-        SPButtonPcrimary
+        SPButtonIcon,
     },
 
     props: {
         svg: String,
         title: String,
+        action: String
     }
 }
 </script>
