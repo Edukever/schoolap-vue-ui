@@ -1,72 +1,11 @@
 
-
 <template>
-
-  <br>
-  <SPBannerLogin 
-    :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
-  </SPBannerLogin>
-
-  <br><br>
-  <SPButtonPrimary 
-    :title="'Suivant'">
-  </SPButtonPrimary>
-  <br>
-
-  <SPButtonBack
-    :title="'Retour'">
-  </SPButtonBack>
-  <br>
-
-  <SPButtonGoogle
-    :title="'Se connecter avec google'">
-  </SPButtonGoogle>
-  <br>
-
-  <SPButtonIcon
-    :title="'Suivant'" :position="'left'">
-  </SPButtonIcon>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <SPTextField
-    :label="'Nom de l\'élève'"
-    :placeholder="'Nom de l\'élève'">
-  </SPTextField>
-  <br>
-  <br>
-  <br>
-  <br>
-  
-  <SPTextFieldIcon
-      :icon="'fa fa-user'"
-      :placeholder="'User name'"
-      :label="'Username'">
-  </SPTextFieldIcon>
-  
-  <br>
-
-  <SPSearchBar 
-    :placeholder="'Faites votre recherche rapide'">
-  </SPSearchBar>
-
-  <br>
-
-  <SPRadio :label="'Femme'"></SPRadio>
-
-  <SPCheckBox :label="'Une école'">
-  </SPCheckBox>
-
-  <br>
-
-  <SPTextarea :label="'Commentaire'" :placeholder="'Ajouter une commentaire par rapport à l’absence de votre apprenants '">
-  </SPTextarea>
-
-  <br>
-
-  
+  <div class="sp-core-container">
+    <SPSideBar />
+    <main>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati magni, non rerum quod ducimus eveniet eos optio eius animi modi iste similique repellat asperiores sed quasi debitis! Iusto, dolorum?</h1>
+    </main>
+  </div>
 </template>
 
 
@@ -85,23 +24,25 @@ import SPCheckBox from './components/forms/checkBox/SPCheckBox.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
+import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 
 export default {
 
     components: {
-      HelloWorld,
-      TheWelcome,
-      SPButtonPrimary,
-      SPButtonBack,
-      SPButtonIcon,
-      SPTextField,
-      SPSearchBar,
-      SPRadio,
-      SPCheckBox,
-      SPTextFieldIcon,
-      SPTextarea,
-      SPButtonGoogle,
-      SPBannerLogin
+      // HelloWorld,
+      // TheWelcome,
+      // SPButtonPrimary,
+      // SPButtonBack,
+      // SPButtonIcon,
+      // SPTextField,
+      // SPSearchBar,
+      // SPRadio,
+      // SPCheckBox,
+      // SPTextFieldIcon,
+      // SPTextarea,
+      // SPButtonGoogle,
+      // SPBannerLogin,
+      SPSideBar
     }
 }
 </script>

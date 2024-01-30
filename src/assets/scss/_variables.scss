@@ -21,6 +21,9 @@ $color-jaune-light: #FFF4D8 !default;
 $color-orange: #F68C2C !default;
 $color-orange-1: #FFB391 !default;
 $color-orange-light: #FFF2EC !default;
+$white: #ffffff !default;
+$black: #000000 !default;
+$blue-variant-link: #41A3DF !default;
 
 $colors:(
   "red":        $color-red,
@@ -45,6 +48,7 @@ $colors:(
 
 // Linear gradient
 $gradient-blue: linear-gradient(360deg, #3F97E3 0%, #43B5D7 100%);
+$sidebar-gradient:  linear-gradient(0deg, #3F97E3 0%, #43B5D7 100%);
 
 
 // Typograghy
@@ -81,6 +85,15 @@ $enable-button-pointers:      true !default;
 $btn-padding-y :              .375rem !default;
 $btn-padding-x :               1.5rem !default;
 $link-hover-decoration:        null !default;
+
+/**** Breakpoints responsive ****/
+  $breakpoint-mobile: 480px;
+  $breakpoint-mobile-xl: 600px;
+  $breakpoint-tablet: 768px;
+  $breakpoint-tablet-xl: 992px;
+  $breakpoint-desktop: 1024px;
+  $breakpoint-desktop-xl: 1200px;
+
 
 
 

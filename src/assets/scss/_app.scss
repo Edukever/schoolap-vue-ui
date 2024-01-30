@@ -1,5 +1,25 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'popins-regular';
+    font-family: $font-family-sans-serif;
+}
+
+.sp-core-container {
+    display: flex;
+    main {
+        padding: 10px 10px;
+        max-width: 94%;
+        width: 100%;
+        border: solid $color-vert 1px;
+    }
+  }
+
+
+@media screen and (max-width: $breakpoint-mobile-xl) {
+    .sp-core-container{
+        flex-direction: row;
+        main{
+            transition: margin-left 0.5s;
+        }
+    }
 }

@@ -11,6 +11,13 @@ import SPSearchBar from './src/components/forms/inputs/SPSearchBar.vue';
 import SPTextarea from './src/components/forms/inputs/SPTextarea.vue';
 import SPTextField from './src/components/forms/inputs/SPTextField.vue';
 import SPTextFieldIcon from './src/components/forms/inputs/SPTextFieldIcon.vue';
+import SPSideBar from './src/components/navigation/sidebar/SPSideBar.vue';
+import iconUnderline from './src/components/icons/iconUnderline.vue';
+import iconVector from './src/components/icons/iconVector.vue';
+import logoWhite from './src/components/icons/logoWhite.vue';
+import SPButtonToggleSideBar from './src/components/buttons/SPButtonSideBar.vue';
+import iconDashboard from './src/components/icons/iconDashboard.vue';
+import iconBar from './src/components/icons/iconBar.vue';
 
 export {
     SPButtonPrimary,
@@ -23,6 +30,13 @@ export {
     SPSearchBar,
     SPTextarea,
     SPTextField,
-    SPTextFieldIcon
+    SPTextFieldIcon,
+    SPSideBar,
+    iconVector,
+    logoWhite,
+    SPButtonToggleSideBar,
+    iconUnderline,
+    iconDashboard,
+    iconBar
 }
 
