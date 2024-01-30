@@ -14,6 +14,9 @@ import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
 import SPModalRight from './components/modal/SPModalRight.vue'
 import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerWelcome from './components/banners/SPBannerWelcome.vue'
+import SPBreadTitle from './components/breadcrump/SPBreadTitle.vue'
+import SPBreadCrump from './components/breadcrump/SPBreadcrump.vue'
+
 
 import './assets/scss/main.scss'
 
@@ -36,6 +39,8 @@ const SchoolapUI = {
     app.component('sp-modal-right', SPModalRight)
     app.component('sp-banner-welcome', SPBannerWelcome)
     app.component('sp-select', SPSelect)
+    app.component('sp-bread-title', SPBreadTitle)
+    app.component('sp-bread-crump', SPBreadCrump)
   }
 }
 
