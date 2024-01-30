@@ -14,8 +14,8 @@
     background-color: $color-orange;
     border: 1px solid transparent;
     padding: 10px 20px;
-    width: 200px;
-    margin: 35px;
+    width: 100%;
+    margin: auto;
     height: 45px;
     align-items: center;
     justify-content: center;
@@ -25,15 +25,21 @@
 
     .title {
         font-weight: 570;
-
+        font-size: 15px;
     }
     .title-left {
-        font-weight: 550;
+        font-weight: 570;
         margin-left: 1px;
+        font-size: 15px;
     }
 
     .svg-right {
-        margin-left: 6px;
+        margin-left: 6px; 
+    }
+
+    .svg-img {
+        height: 13px;
+        width: 14px;
     }
 
     &:hover {
@@ -85,7 +91,7 @@
     border: 1px solid $color-orange;
     padding: 10px 20px;
     width: 100%;
-    margin: 35px;
+    margin: auto;
     height: 45px;
     align-items: center;
     justify-content: center;
@@ -108,11 +114,12 @@
 @each $color, $value in $colors {
     .sp-btn-back-#{$color} {
         @extend .sp-btn-back;
-        color: $value;
+        color: red;
         border: 1px solid $value;  
 
         .svg-left svg path {
             stroke: $value;
+            
         }
     }    
 }

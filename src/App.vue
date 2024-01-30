@@ -2,10 +2,16 @@
 
 <template>  
 
+<SPCardActivity :title="'Ecrire un communiqué'" :action="'Ajouter un personnel'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
+
+<br>
 <div class="row">
-   <div class="col-md-6">
-      <SPCardActivity title="Ecrire un communiqué" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
-   </div>
+    <div class="col-md-12">
+      <SPCardActivity :title="'Ecrire un communiqué'" :action="'Ajouter pers'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
+    </div>
+    <div class="col-md-6">
+      <SPCardActivity :title="'Présence du personnel'" :action="'Faire présence'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
+    </div>
 </div>
 
 <SPBreadcrump :title="'Retour'"></SPBreadcrump>
@@ -15,6 +21,7 @@
   </SPButtonPrimary>
   <br>
   <SPButtonIcon
+    :src="'/src/assets/img/icons/group-plus.svg'"
     :title="'Suivant'" :position="'left'">
   </SPButtonIcon>
   <br>
@@ -29,24 +36,24 @@
     :title="'Retour'">
   </SPButtonBack>
   <br>
- <SPSelect :placeholder="'Saississez'" :options="list"></SPSelect>
-  <SPModalRight :welcome="'Bienvenue Merdi!'" 
+ <SPSelect :options="list"></SPSelect>
+  <!-- <SPModalRight :welcome="'Bienvenue Merdi!'" 
     :sucessfully_message="'Votre compte à été crée avec succès'"
     :message="'Vous pouvez désormais accéder à votre espace sur Schoolap et le paramétrer.'">
-  </SPModalRight>
+  </SPModalRight> -->
   <br>
   <br>
   <br>
   <br>
   <br>
-  <SPBannerWelcome 
+  <!-- <SPBannerWelcome 
       :welcome="'Bienvenue Meschack !'" 
       :description="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'" 
       :src="'/src/assets/img/icons/welcome.svg'" />
   <br>
   <br>
-  <hr>
-  <div class="row">
+  <hr> -->
+  <!-- <div class="row">
      <div class="col-md-6">
         <SPStat
           :title="'Personnel'"
@@ -62,7 +69,7 @@
           :img_button_action="'/src/assets/img/icons/plus.svg'"  
           :svg="'/src/assets/img/icons/user.svg'" />  
      </div>
-  </div>
+  </div> -->
   <!-- <SPBannerLogin 
     :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
   </SPBannerLogin>
