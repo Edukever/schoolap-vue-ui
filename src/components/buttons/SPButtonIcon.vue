@@ -1,5 +1,5 @@
 <template>
-    <button class="sp-btn" @click="handleButtonClick">
+    <button class="sp-btn-orange" @click="handleButtonClick">
         <template v-if="position == 'right'">
             <div class="title">{{ title }}</div>
             <div class="svg-right">

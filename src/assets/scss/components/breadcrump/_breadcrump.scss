@@ -1,0 +1,33 @@
+.sp-bread-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .sp-bread-img {
+        width: 40px;
+        height: 39;
+    }
+
+    .sp-title {
+        font-family: $font-family-sans-serif;
+        margin-top: 14px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 33px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .sp-img {
+        width: 33px;
+        height: 24px;
+    }
+
+    .sp-title-bleu {
+        font-weight: 400;
+        font-size: 20px;
+        margin-top: 8px;
+        color: $color-bleu;
+    }
+
+}

@@ -5,11 +5,15 @@
 @import "banners/banner_login";
 @import "banners/banner_welcome";
 
+// Breadcrump
+@import "breadcrump/breadcrump";
+
 // Buttons
 @import "buttons/buttons";
 
 // Cards 
 @import "cards/stat";
+@import "cards/activity.scss";
 
 // Forms
 @import "forms/text-field";

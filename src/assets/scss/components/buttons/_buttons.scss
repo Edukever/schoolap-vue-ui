@@ -14,7 +14,7 @@
     background-color: $color-orange;
     border: 1px solid transparent;
     padding: 10px 20px;
-    width: 100%;
+    width: 200px;
     margin: 35px;
     height: 45px;
     align-items: center;
@@ -37,16 +37,34 @@
     }
 
     &:hover {
-        color: $color-orange;
-        background: $color-orange-light;
+        // // color: $color-orange;
+        // background: $color-orange;
 
-        .svg-left svg path {
-            stroke: $color-orange;
-        }
+        // .svg-left svg path {
+        //     stroke: $color-orange;
+        // }
 
-        .svg-right svg path{
-            stroke: $color-orange; 
-        }
+        // .svg-right svg path{
+        //     stroke: $color-orange; 
+        // }
+    }
+}
+
+@each $color, $value in $colors {
+    .sp-btn-#{$color} {
+        @extend .sp-btn;
+        background: $value;
+  
+        // &:hover {
+        // //   color: $value;
+        //   background: $value;
+        //   .svg-left svg path {
+        //     stroke: $value;
+        //   }
+        //   .svg-right svg path {
+        //     stroke: $value; 
+        //   }
+        // }
     }
 }
 
@@ -85,4 +103,16 @@
         font-size: 16px;
         color: $color-noir;
     }
+}
+
+@each $color, $value in $colors {
+    .sp-btn-back-#{$color} {
+        @extend .sp-btn-back;
+        color: $value;
+        border: 1px solid $value;  
+
+        .svg-left svg path {
+            stroke: $value;
+        }
+    }    
 }
