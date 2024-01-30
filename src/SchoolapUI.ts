@@ -16,7 +16,8 @@ import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerWelcome from './components/banners/SPBannerWelcome.vue'
 import SPBreadTitle from './components/breadcrump/SPBreadTitle.vue'
 import SPBreadCrump from './components/breadcrump/SPBreadcrump.vue'
-
+import SPCardActivity from './components/cards/SPCardActivity.vue'
+import SPStat from './components/cards/SPStat.vue'
 
 import './assets/scss/main.scss'
 
@@ -41,6 +42,8 @@ const SchoolapUI = {
     app.component('sp-select', SPSelect)
     app.component('sp-bread-title', SPBreadTitle)
     app.component('sp-bread-crump', SPBreadCrump)
+    app.component('sp-stat', SPStat)
+    app.component('sp-card-activity', SPCardActivity)
   }
 }
 

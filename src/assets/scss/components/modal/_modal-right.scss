@@ -23,23 +23,26 @@
         }
 
         .successful-message {
+            font-family: $font-family-sans-serif;
             color: $color-noir;
             line-height: 25px;
-            font-weight: 550;
-            font-size: 18px;
+            font-weight: 410;
+            font-size: 15px;
         }
 
         .message {
             @extend .successful-message;
             font-weight: 320;
-            font-size: 20px;
+            font-size: 15px;
+            font-family: $font-family-sans-serif;
+
         }
 
     }
 
     .sp-button-position {
-        padding: 5px;
-        width: 300px;
+        padding: 38px;
+        width: 370px;
     }
 
     .paragraph {
@@ -47,10 +50,10 @@
         font-size: 12.20px;
         color:  $color-noir;
         padding: 20px;
-        margin-left: 25px;
+        width: 340px;
+        margin-left: -20px;
         text-align: center;
-        margin-top: -42px;
-        text-align: center;
+        // margin-top: 42px;
     }
     
 }

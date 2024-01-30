@@ -1,0 +1,21 @@
+.sp-select {
+        justify-content: space-between;
+        border: 1.29px solid $color-gris-2;
+        height: 47.97px;
+        font-weight: 500;
+        font-size: 15px;
+        // line-height: 25px;
+        letter-spacing: -0.149625px;
+        border-radius: 0.62em;
+        outline: none;
+        padding: 13px;
+        margin: auto;
+        width: 100%;
+        color: $color-noir;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url('/src/assets/img/icons/fleche.svg') no-repeat right center;         
+        background-position: calc(100% - 10px) center; 
+  
+}
