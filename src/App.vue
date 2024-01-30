@@ -2,6 +2,33 @@
 
 <template>  
 
+<div class="row">
+   <div class="col-md-6">
+      <SPCardActivity title="Ecrire un communiqué" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
+   </div>
+</div>
+
+<SPBreadcrump :title="'Retour'"></SPBreadcrump>
+<SPBreadTitle  :src="'/src/assets/img/icons/desktop.svg'" :title="'Votre école'"></SPBreadTitle>
+<SPButtonPrimary 
+    :title="'Suivant'">
+  </SPButtonPrimary>
+  <br>
+  <SPButtonIcon
+    :title="'Suivant'" :position="'left'">
+  </SPButtonIcon>
+  <br>
+  <br>
+  <br>
+  <br>
+  <SPButtonGoogle
+    :title="'Se connecter avec google'">
+  </SPButtonGoogle>
+  <br>
+  <SPButtonBack
+    :title="'Retour'">
+  </SPButtonBack>
+  <br>
  <SPSelect :placeholder="'Saississez'" :options="list"></SPSelect>
   <SPModalRight :welcome="'Bienvenue Merdi!'" 
     :sucessfully_message="'Votre compte à été crée avec succès'"
@@ -120,7 +147,10 @@ import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
 import SPModalRight from './components/modal/SPModalRight.vue'
 import SPBannerWelcome from './components/banners/SPBannerWelcome.vue'
+import SPBreadTitle from './components/breadcrump/SPBreadTitle.vue'
 import SPStat from './components/cards/SPStat.vue'
+import SPBreadcrump from './components/breadcrump/SPBreadcrump.vue'
+import SPCardActivity from './components/cards/SPCardActivity.vue'
 
 export default {
 
@@ -142,7 +172,10 @@ export default {
     SPModalRight,
     SPBannerWelcome,
     SPStat,
-    SPSelect
+    SPSelect,
+    SPBreadTitle,
+    SPBreadcrump,
+    SPCardActivity
   },
 
   data() {

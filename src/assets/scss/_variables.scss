@@ -43,6 +43,22 @@ $colors:(
   "orange-light": $color-orange-light,
 )!default;
 
+
+// Buttons sizes
+$xl: 24px;
+$lg: 20px;
+$md: 18px;
+$default: 16px;
+$sm: 14px;
+
+$button-sizes: (
+  "xl": $xl,
+  "lg": $lg,
+  "md": $md,
+  "default": $default,
+  "sm": $sm
+)!default;
+
 // Linear gradient
 $gradient-blue: linear-gradient(360deg, #3F97E3 0%, #43B5D7 100%);
 
