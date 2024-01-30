@@ -14,6 +14,8 @@
 
 export default {
 
+    name: 'SPBannerWelcome',
+
     props: {
         welcome: String,
         description: String,

@@ -1,5 +1,5 @@
 <template>
-    <button class="sp-btn" @click="handleButtonClick">
+    <button class="sp-btn-bleu" @click="handleButtonClick">
         <div class="title">{{ title }}</div>
     </button>
 </template>

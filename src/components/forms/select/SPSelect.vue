@@ -13,6 +13,8 @@
 
 export default {
     
+    name: 'SPSelect',
+
     props: {
         label: String,
         placeholder: String,

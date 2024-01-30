@@ -2,6 +2,25 @@
 
 <template>  
 
+<SPButtonPrimary 
+    :title="'Suivant'">
+  </SPButtonPrimary>
+  <br>
+  <SPButtonIcon
+    :title="'Suivant'" :position="'left'">
+  </SPButtonIcon>
+  <br>
+  <br>
+  <br>
+  <br>
+  <SPButtonGoogle
+    :title="'Se connecter avec google'">
+  </SPButtonGoogle>
+  <br>
+  <SPButtonBack
+    :title="'Retour'">
+  </SPButtonBack>
+  <br>
  <SPSelect :placeholder="'Saississez'" :options="list"></SPSelect>
   <SPModalRight :welcome="'Bienvenue Merdi!'" 
     :sucessfully_message="'Votre compte à été crée avec succès'"
