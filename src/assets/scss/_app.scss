@@ -7,10 +7,13 @@
 .sp-core-container {
     display: flex;
     main {
-        padding: 10px 10px;
+        padding: 1.7vw 1.7vw;
         max-width: 94%;
         width: 100%;
         border: solid $color-vert 1px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 100vh;
     }
   }
 
