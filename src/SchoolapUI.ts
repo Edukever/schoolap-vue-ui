@@ -18,8 +18,8 @@ import SPBreadTitle from './components/breadcrump/SPBreadTitle.vue'
 import SPBreadCrump from './components/breadcrump/SPBreadcrump.vue'
 import SPCardActivity from './components/cards/SPCardActivity.vue'
 import SPStat from './components/cards/SPStat.vue'
-import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
+import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
 
 
 import './assets/scss/main.scss'
