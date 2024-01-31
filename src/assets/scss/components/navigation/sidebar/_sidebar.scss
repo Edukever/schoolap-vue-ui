@@ -1,0 +1,263 @@
+.sp-container-sidebar{
+    overflow-x: hidden;
+    border-radius: 0px 30px 30px 0px;
+    width: 25%;
+    box-shadow: 0px 4px 30px 10px rgba(66, 167, 198, 0.50);
+    transition: width 0.5s ease-in-out;
+    .sp-vector{
+        position: absolute;
+        z-index: 2;
+        svg{
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    &.is-collapsed{
+        width: 6%;
+        transition: width 0.5s ease-in-out;
+        aside{
+            .sp-sidebar-header{
+                display: block;
+                margin: 0 30px;
+                padding: 20px 0;
+                .logo-white, .sp-toggle-btn{
+                    display: none;
+                }
+                .sp-toggle-open{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer !important;
+                    }
+                }
+            }
+            .sp-profil-user{
+                display: block;
+                width: 50px;
+                margin: 0 12px;
+                overflow: hidden;
+
+                .sp-profil-user-avatar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 0;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .sp-profil-user-info{
+                    display: none;
+                }
+            }
+
+            .sp-sidebar-menu{
+                padding-left: 22px;
+                li{
+                    padding: 0;
+                    svg:first-child{
+                        width: 25px;
+                        height: 25px;
+                        margin-right: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        padding: 10px 0;
+        color: $white;
+        width: 290px;
+        margin-right: 15px;
+        min-height: 100vh;
+        max-height: 100vh;
+        border-radius: 0px 30px 30px 0px;
+        background:$sidebar-gradient;
+        box-shadow: 0px 4px 30px 10px rgba(66, 167, 198, 0.50);
+
+        .sp-sidebar-header {
+            margin: 0;
+            padding: 12px 10px;
+            display: flex;
+            justify-content: space-around;
+            align-self: start;
+            align-items: center;
+            svg{
+                flex-shrink: 0;
+                cursor: pointer;
+            }
+            svg:first-child{
+                width: 130px;
+                height: 57px;
+            }
+
+            svg:last-child{
+                width: 34px;
+                height: 34px;
+            }
+        }
+    
+        .sp-sidebar-menu{
+            position: relative;
+            z-index: 2;
+            padding-left: 30px;
+            margin: 1.4rem 0 0 0;
+            width: 100%;
+            li{
+                display: block;
+                margin: 10px 0;
+                width: 100%;
+                a {
+                    display: flex;
+                    font-size: 11px;
+                    color: $white;
+                    width: 100%;
+                    padding: 10px;
+                    text-decoration: none;
+                    font-weight: $font-weight-medium-xl;
+                    text-transform: uppercase;
+                    -webkit-tap-highlight-color: transparent;
+                    cursor: pointer;
+    
+                    svg{
+                        width: 21px;
+                        height: 21px;
+                        margin: 0 4px;
+                        cursor: pointer;
+                        .sp-color{
+                            fill: $white;
+                        
+                        }
+                    }
+                
+                    &:hover, &.active {
+                        color: $blue-variant-link;
+                        background: $white;
+                        outline: none;
+                        position: relative;
+                        background-color: $white;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .sp-icon-link{
+                    display: flex;
+                    align-items: center;
+                    
+                    .sp-link-name{
+                        width: 69%;
+                    }
+                    .sp-svg-right{
+                        &:hover{
+                            path{
+                                fill: $color-bleu;
+                            }
+                        }
+                    }
+                }
+
+                &.isToggle > .sp-icon-link{
+                    .sp-svg-right{
+                        transform: rotate(-180deg);
+                        path{
+                            fill: $color-bleu;
+                        }
+                    }
+                }
+
+                .sp-sub-menu{
+                    height: 0;
+                    display: none;
+                    padding: 6px 6px 14px 80px;
+                    margin-top: -10px;
+                    overflow: hidden;
+                }
+                .sp-sub-menu.isToggle{
+                    display: block;
+                    height:auto;
+                }
+
+                
+            }
+        }
+
+        .sp-profil-user{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 4px 10px;
+            margin: 0 10px;
+            position: relative;
+            z-index: 2;
+
+            .sp-profil-user-avatar{
+                border: solid $white 2px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: $white;
+                margin: 0 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .sp-profil-user-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 1px;
+                .sp-text-welcome{
+                    font-size: 10px;
+                    font-weight: $font-weight-medium-xl;
+                    color: $white;
+                    margin: 0;
+                    line-height: 5px;
+                }
+                .sp-profil-user-name{
+                    position: relative;
+                    h3{
+                        position: relative;
+                        font-size:30px;
+                        font-weight: $font-weight-medium;
+                        color: $white;
+                        margin: 0;
+                    }
+                    svg{
+                        position: absolute;
+                        top: 80%;
+                        display: flex;
+                        align-self: flex-end;
+                        right: 0;
+                    }
+                }
+            
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-mobile-xl) {
+    .sp-container-sidebar{
+        max-width: 10%;
+        width: 100%;
+    }
+}

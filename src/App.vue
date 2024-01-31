@@ -1,137 +1,11 @@
 
-
-<template>  
-
-<SPCardActivity :title="'Ecrire un communiqué'" :action="'Ajouter un personnel'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
-
-<br>
-<div class="row">
-    <div class="col-md-12">
-      <SPCardActivity :title="'Ecrire un communiqué'" :action="'Ajouter pers'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
-    </div>
-    <div class="col-md-6">
-      <SPCardActivity :title="'Présence du personnel'" :action="'Faire présence'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
-    </div>
-</div>
-
-<SPBreadcrump :title="'Retour'"></SPBreadcrump>
-<SPBreadTitle  :src="'/src/assets/img/icons/desktop.svg'" :title="'Votre école'"></SPBreadTitle>
-<SPButtonPrimary 
-    :title="'Suivant'">
-  </SPButtonPrimary>
-  <br>
-  <SPButtonIcon
-    :src="'/src/assets/img/icons/group-plus.svg'"
-    :title="'Suivant'" :position="'left'">
-  </SPButtonIcon>
-  <br>
-  <br>
-  <br>
-  <br>
-  <SPButtonGoogle
-    :title="'Se connecter avec google'">
-  </SPButtonGoogle>
-  <br>
-  <SPButtonBack
-    :title="'Retour'">
-  </SPButtonBack>
-  <br>
- <SPSelect :options="list"></SPSelect>
-  <!-- <SPModalRight :welcome="'Bienvenue Merdi!'" 
-    :sucessfully_message="'Votre compte à été crée avec succès'"
-    :message="'Vous pouvez désormais accéder à votre espace sur Schoolap et le paramétrer.'">
-  </SPModalRight> -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <!-- <SPBannerWelcome 
-      :welcome="'Bienvenue Meschack !'" 
-      :description="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'" 
-      :src="'/src/assets/img/icons/welcome.svg'" />
-  <br>
-  <br>
-  <hr> -->
-  <!-- <div class="row">
-     <div class="col-md-6">
-        <SPStat
-          :title="'Personnel'"
-          :description="'Ajouter un personnel'" 
-          :counter="12"
-          :img_button_action="'/src/assets/img/icons/plus.svg'"  
-          :svg="'/src/assets/img/icons/user.svg'" />  
-     </div>
-     <div class="col-md-6">
-        <SPStat
-          :title="'Elèves'"
-          :description="'Ajouter un élève'" 
-          :img_button_action="'/src/assets/img/icons/plus.svg'"  
-          :svg="'/src/assets/img/icons/user.svg'" />  
-     </div>
-  </div> -->
-  <!-- <SPBannerLogin 
-    :title="'Une plateforme de service éducative complète pour l\'administration et la pédagogie.'">
-  </SPBannerLogin>
-
-  <br><br>
-  <SPButtonPrimary 
-    :title="'Suivant'">
-  </SPButtonPrimary>
-  <br>
-
-  <SPButtonBack
-    :title="'Retour'">
-  </SPButtonBack>
-  <br>
-
-  <SPButtonGoogle
-    :title="'Se connecter avec google'">
-  </SPButtonGoogle>
-  <br>
-
-  <SPButtonIcon
-    :title="'Suivant'" :position="'left'">
-  </SPButtonIcon>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <SPTextField
-    :label="'Nom de l\'élève'"
-    :placeholder="'Nom de l\'élève'">
-  </SPTextField>
-  <br>
-  <br>
-  <br>
-  <br>
-  
-  <SPTextFieldIcon
-      :icon="'fa fa-user'"
-      :placeholder="'User name'"
-      :label="'Username'">
-  </SPTextFieldIcon>
-  
-  <br>
-
-  <SPSearchBar 
-    :placeholder="'Faites votre recherche rapide'">
-  </SPSearchBar>
-
-  <br>
-
-  <SPRadio :label="'Femme'"></SPRadio>
-
-  <SPCheckBox :label="'Une école'">
-  </SPCheckBox>
-
-  <br>
-
-  <SPTextarea :label="'Commentaire'" :placeholder="'Ajouter une commentaire par rapport à l’absence de votre apprenants '">
-  </SPTextarea>
-
-  <br> -->
+<template>
+  <div class="sp-core-container">
+    <SPSideBar />
+    <main>
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati magni, non rerum quod ducimus eveniet eos optio eius animi modi iste similique repellat asperiores sed quasi debitis! Iusto, dolorum?</h1>
+    </main>
+  </div>
 </template>
 
 
@@ -151,54 +25,26 @@ import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
-import SPPasswordField from './components/forms/inputs/SPPasswordField.vue'
-import SPModalRight from './components/modal/SPModalRight.vue'
-import SPBannerWelcome from './components/banners/SPBannerWelcome.vue'
-import SPBreadTitle from './components/breadcrump/SPBreadTitle.vue'
-import SPStat from './components/cards/SPStat.vue'
-import SPBreadcrump from './components/breadcrump/SPBreadcrump.vue'
-import SPCardActivity from './components/cards/SPCardActivity.vue'
+import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 
 export default {
 
-  components: {
-    HelloWorld,
-    TheWelcome,
-    SPButtonPrimary,
-    SPButtonBack,
-    SPButtonIcon,
-    SPTextField,
-    SPSearchBar,
-    SPRadio,
-    SPCheckBox,
-    SPTextFieldIcon,
-    SPTextarea,
-    SPButtonGoogle,
-    SPBannerLogin,
-    SPPasswordField,
-    SPModalRight,
-    SPBannerWelcome,
-    SPStat,
-    SPSelect,
-    SPBreadTitle,
-    SPBreadcrump,
-    SPCardActivity
-  },
-
-  data() {
-    return {
-      list: [
-          {
-            value: 1,
-            label: 'Français'
-          },
-          {
-            value: 2,
-            label: 'Anglais'
-          },
-      ]
+    components: {
+      // HelloWorld,
+      // TheWelcome,
+      // SPButtonPrimary,
+      // SPButtonBack,
+      // SPButtonIcon,
+      // SPTextField,
+      // SPSearchBar,
+      // SPRadio,
+      // SPCheckBox,
+      // SPTextFieldIcon,
+      // SPTextarea,
+      // SPButtonGoogle,
+      // SPBannerLogin,
+      SPSideBar
     }
-  }
 
 }
 </script>
