@@ -91,6 +91,8 @@
 <script >
 
 export default {
+
+    name: "SPCardProfilSchool",
     props: {
         schoolName: {
             type: String,
