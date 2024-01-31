@@ -23,6 +23,7 @@ import SPRadio from './components/forms/radio/SPRadio.vue'
 import SPCheckBox from './components/forms/checkBox/SPCheckBox.vue'
 import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
 import SPTextarea from './components/forms/inputs/SPTextarea.vue'
+import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 
@@ -44,6 +45,7 @@ export default {
       // SPBannerLogin,
       SPSideBar
     }
+
 }
 </script>
 

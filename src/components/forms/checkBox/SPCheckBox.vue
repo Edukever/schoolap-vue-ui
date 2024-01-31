@@ -1,7 +1,7 @@
 <template>
     <div class="sp-form-radio">
         <input id="check" type="checkbox" v-model="isChecked" @input="handleCheckboxChange">
-        <label for="check">
+        <label for="check" class="sp-label-box">
             {{ label }}
         </label>     
     </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-
+    name: 'SPCheckBox',
     props: {
         label: {
             type: String

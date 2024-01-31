@@ -1,0 +1,59 @@
+.sp-modal-right {
+    background: white;
+    border-radius: 45px 0px 0px 45px;
+    height: 740px;
+    width: 410px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    .svg {
+        padding: 20px;
+        margin-top: 130px;
+        margin-left: 20px;
+
+        .welcome {
+            color: $color-noir;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 48px;
+            font-family: $font-family-sans-serif;
+            margin-top: 15px;
+        }
+
+        .successful-message {
+            font-family: $font-family-sans-serif;
+            color: $color-noir;
+            line-height: 25px;
+            font-weight: 410;
+            font-size: 15px;
+        }
+
+        .message {
+            @extend .successful-message;
+            font-weight: 320;
+            font-size: 15px;
+            font-family: $font-family-sans-serif;
+
+        }
+
+    }
+
+    .sp-button-position {
+        padding: 38px;
+        width: 370px;
+    }
+
+    .paragraph {
+        @extend .sp-button-position;
+        font-size: 12.20px;
+        color:  $color-noir;
+        padding: 20px;
+        width: 340px;
+        margin-left: -20px;
+        text-align: center;
+        // margin-top: 42px;
+    }
+    
+}

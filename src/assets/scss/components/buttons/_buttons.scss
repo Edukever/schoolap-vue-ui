@@ -1,6 +1,6 @@
 .sp-btn {
     display: flex;
-    line-height: 10px;
+    line-height: 26.97px;
     color: white;
     text-align: center;
     text-decoration:none;
@@ -8,44 +8,69 @@
     vertical-align: middle;
     font-family: $font-family-sans-serif;
     cursor: if($enable-button-pointers, pointer, null);
-    font-size: 14px;
-    border-radius: 8px;
+    font-size: 15.98px;
+    border-radius: 10px;
     user-select: none;
     background-color: $color-orange;
     border: 1px solid transparent;
     padding: 10px 20px;
     width: 100%;
-    margin: 35px;
-    height: 50px;
+    margin: auto;
+    height: 45px;
     align-items: center;
     justify-content: center;
     position: relative;
     gap: 15px;
+    font-weight: 600;
 
     .title {
         font-weight: 570;
-
+        font-size: 15px;
     }
     .title-left {
-        font-weight: 550;
+        font-weight: 570;
         margin-left: 1px;
+        font-size: 15px;
     }
 
     .svg-right {
-        margin-left: 6px;
+        margin-left: 6px; 
+    }
+
+    .svg-img {
+        height: 13px;
+        width: 14px;
     }
 
     &:hover {
-        color: $color-orange;
-        background: $color-orange-light;
+        // // color: $color-orange;
+        // background: $color-orange;
 
-        .svg-left svg path {
-            stroke: $color-orange;
-        }
+        // .svg-left svg path {
+        //     stroke: $color-orange;
+        // }
 
-        .svg-right svg path{
-            stroke: $color-orange; 
-        }
+        // .svg-right svg path{
+        //     stroke: $color-orange; 
+        // }
+    }
+}
+
+@each $color, $value in $colors {
+    .sp-btn-#{$color} {
+        @extend .sp-btn;
+        background: $value;
+  
+        // &:hover {
+        // //   color: $value;
+        //   background: $value;
+        //   .svg-left svg path {
+        //     stroke: $value;
+        //   }
+        //   .svg-right svg path {
+        //     stroke: $value; 
+        //   }
+        // }
     }
 }
 
@@ -59,15 +84,15 @@
     vertical-align: middle;
     font-family: $font-family-sans-serif;
     cursor: if($enable-button-pointers, pointer, null);
-    font-size: 14px;
+    font-size: 15.98px;
     border-radius: 8px;
     user-select: none;
     background-color: white;
     border: 1px solid $color-orange;
     padding: 10px 20px;
     width: 100%;
-    margin: 35px;
-    height: 50px;
+    margin: auto;
+    height: 45px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -84,4 +109,17 @@
         font-size: 16px;
         color: $color-noir;
     }
+}
+
+@each $color, $value in $colors {
+    .sp-btn-back-#{$color} {
+        @extend .sp-btn-back;
+        color: red;
+        border: 1px solid $value;  
+
+        .svg-left svg path {
+            stroke: $value;
+            
+        }
+    }    
 }

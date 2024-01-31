@@ -1,0 +1,42 @@
+.sp-card {
+    padding: 15px;
+    height: 220px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none;
+    border-radius: 18.47px;
+    margin-bottom: 1rem;
+    box-shadow: 3.6400320529937744px 0px 21.840194702148438px 0px #B9D4D080;
+
+    .sp-card-div {
+        background: $color-bleu-light;
+        height: 45px;
+        width: 45px;
+        border-radius: 20px;
+        padding: 7px;
+    }
+    .sp-card-img {
+        height: 30px;
+        width: 31px;
+    }
+
+    .sp-title {
+        font-size: 19px;
+        margin-top: 17px;
+        font-weight: 800;
+        width: 140px;
+        color: $color-noir;
+        font-family: $font-family-sans-serif;
+    }
+
+    .sp-div-btn {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}

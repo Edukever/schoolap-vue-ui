@@ -1,12 +1,12 @@
 /***** Font weight *****/
 /***** Button *****/
 .sp-banner-login {
+  position: relative;
   background: linear-gradient(360deg, #3F97E3 0%, #43B5D7 100%);
   border-radius: 5px;
-  margin: 60px;
   box-shadow: 0px 4px 30px 0px rgba(66, 167, 198, 0.5019607843);
-  height: 800px;
-  width: auto;
+  height: 750px;
+  width: 488px;
 }
 .sp-banner-login .sp-vector {
   position: absolute;
@@ -15,11 +15,10 @@
 .sp-banner-login .sp-vector-rotate {
   transform: rotate(-190deg);
   position: absolute;
-  margin-top: -283px;
+  margin-top: -258px;
   margin-left: -159PX;
 }
 .sp-banner-login .sp-logo {
-  margin-top: 30px;
   text-align: center;
   padding: 30px;
 }
@@ -39,7 +38,7 @@
   margin-top: 5px;
 }
 .sp-banner-login .sp-mask-group {
-  position: relative;
+  margin-top: 20px;
   margin-left: 105px;
 }
 
@@ -53,7 +52,7 @@
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   font-size: 14px;
-  border-radius: 8px;
+  border-radius: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -62,7 +61,7 @@
   padding: 10px 20px;
   width: 100%;
   margin: 35px;
-  height: 50px;
+  height: 45px;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -128,13 +127,14 @@
 .sp-label {
   font-weight: 600;
   line-height: 40px;
+  font-size: 15px;
 }
 
 .sp-form-control, .sp-form-textarea {
-  border: 1px solid #ABABAB;
+  border: 1.29px solid #ABABAB;
   height: 45.9px;
   font-weight: 450;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 25px;
   letter-spacing: -0.149625px;
   border-radius: 0.62em;
@@ -145,11 +145,11 @@
   color: #292D32;
 }
 .sp-form-control::-moz-placeholder, .sp-form-textarea::-moz-placeholder {
-  font-size: 13px;
+  font-size: 15px;
   color: #ABABAB;
 }
 .sp-form-control::placeholder, .sp-form-textarea::placeholder {
-  font-size: 13px;
+  font-size: 15px;
   color: #ABABAB;
 }
 
@@ -164,7 +164,7 @@
   border-radius: 5px;
   height: 45.9px;
   font-weight: 450;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 25px;
   letter-spacing: -0.149625px;
   border-radius: 0.95em;
@@ -198,7 +198,7 @@
   border-radius: 5px;
   height: 45.9px;
   font-weight: 450;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 25px;
   letter-spacing: -0.149625px;
   border-radius: 0.95em;
@@ -221,31 +221,11 @@
 }
 
 .sp-form-password {
-  /* suppress IE >= 10 native functionality that can show password */
-}
-.sp-form-password input[type=password] {
-  border: 1px solid #ABABAB;
-  height: 45.9px;
-  font-weight: 450;
-  font-size: 12px;
-  line-height: 25px;
-  letter-spacing: -0.149625px;
-  border-radius: 0.62em;
-  outline: none;
-  padding: 13px;
-  margin: auto;
+  position: relative;
   width: 100%;
-  color: #292D32;
 }
 .sp-form-password input[type=password]::-ms-reveal {
   display: none;
-}
-.sp-form-password .btn {
-  margin-top: 1.75em;
-}
-.sp-form-password .input-group {
-  position: relative;
-  width: 100%;
 }
 .sp-form-password .toggle {
   background: none;
@@ -253,16 +233,19 @@
   color: #292D32;
   font-weight: 600;
   position: absolute;
-  right: 0.75em;
-  top: 2.25em;
+  right: 0.95em;
+  top: 3.7em;
   z-index: 9;
 }
-.sp-form-password .fa {
-  font-size: 2rem;
+.sp-form-password svg path {
+  stroke: #292D32;
 }
 
 .sp-form-radio {
   margin: 0.5rem;
+}
+.sp-form-radio .radio-label {
+  font-size: 13px;
 }
 .sp-form-radio input[type=radio] {
   position: absolute;

@@ -2,11 +2,13 @@
     <button class="sp-btn" @click="handleButtonClick">
         <div class="title">{{ title }}</div>
     </button>
+
 </template>
 
 <script>
 
 export default {
+    name: 'SPButtonGoogle',
     props: {
         title: String,
     },
