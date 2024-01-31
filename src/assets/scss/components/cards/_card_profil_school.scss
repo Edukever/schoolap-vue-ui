@@ -1,0 +1,91 @@
+.sp-card-profil-school{
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--blanc, #FFF);
+    box-shadow: 3.64px 0px 21.84px 0px rgba(185, 212, 208, 0.50);
+
+    .sp-card-profil-school_content{
+        display: flex;
+        height: 100%;
+        .sp-card-img-left-school{
+            display: block;
+            width: 40%;
+            height: 302px;
+            padding: 0px 0px 20px 10px;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+        .sp-card-description{
+            width: 100%;
+            padding: 0  25px;
+            .sp-card-header{
+                width: 100%;
+                .sp-btn-icon{
+                    border: none;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    padding: 10px 15px;
+                    background-color: $color-orange;
+                    svg{
+                        path{
+                            stroke: $white;
+                        }
+                    }
+                }
+                .sp-card-content-title{
+                    .sp-card-title{
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                    }
+                    .sp-subtitle{
+                        color: $color-bleu;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .sp-card-content-body{
+                --bs-gutter-x : 1.5rem;
+                --bs-gutter-y : 0;
+                display: flex;
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+                padding: 0 10px;
+                margin-top: calc(-1 * var(--bs-gutter-y));
+                margin-right: calc(-.5 * var(--bs-gutter-x));
+                margin-left: calc(-.5 * var(--bs-gutter-x));
+
+                .sp-col-left-6 , .sp-col-right-6{
+                    flex: 0 0 auto;
+                    width: 50%;
+                    .sp-card-content-body-item{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        margin: 18px 0 18px 0;
+                        p{
+                            font-size: 15.4px;
+                            align-items: center;
+                            font-weight: 400;
+                            padding: 0 5px;
+                            margin-bottom: 0 !important;
+
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
