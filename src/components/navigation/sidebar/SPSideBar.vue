@@ -42,12 +42,12 @@
 </template>
 
 <script>
-import iconVector from '@/components/icons/iconVector.vue';
-import logoWhite from '@/components/icons/logoWhite.vue';
-import SPButtonToggleSideBar from '@/components/buttons/SPButtonSideBar.vue';
-import iconUnderline from '@/components/icons/iconUnderline.vue';
-import iconDashboard from '@/components/icons/iconDashboard.vue';
-import iconBar from '@/components/icons/iconBar.vue';
+import iconVector from '../../icons/iconVector.vue';
+import logoWhite from '../../icons/logoWhite.vue';
+import SPButtonToggleSideBar from '../../buttons/SPButtonSideBar.vue';
+import iconUnderline from '../../icons/iconUnderline.vue';
+import iconDashboard from '../../icons/iconDashboard.vue';
+import iconBar from '../../icons/iconBar.vue';
 
 export default {
   components: {
