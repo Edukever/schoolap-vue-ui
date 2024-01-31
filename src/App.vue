@@ -2,8 +2,15 @@
 
 <template>  
 
-<SPCardActivity :title="'Ecrire un communiqué'" :action="'Ajouter un personnel'" :svg="'/src/assets/img/icons/desktop.svg'"></SPCardActivity>
-
+  <SPButtonBack
+    :title="'Retour'">
+  </SPButtonBack>
+  <SPButtonIconArrowRight :title="'Suivant'" :position="'left'">
+  </SPButtonIconArrowRight>
+  <hr>
+  <!-- <SPButtonIcon
+    :title="'Suivant'" :position="'left'">
+  </SPButtonIcon> -->
 <br>
 <div class="row">
     <div class="col-md-12">
@@ -158,6 +165,7 @@ import SPBreadTitle from './components/breadcrump/SPBreadTitle.vue'
 import SPStat from './components/cards/SPStat.vue'
 import SPBreadcrump from './components/breadcrump/SPBreadcrump.vue'
 import SPCardActivity from './components/cards/SPCardActivity.vue'
+import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
 
 export default {
 
@@ -182,7 +190,8 @@ export default {
     SPSelect,
     SPBreadTitle,
     SPBreadcrump,
-    SPCardActivity
+    SPCardActivity,
+    SPButtonIconArrowRight
   },
 
   data() {
