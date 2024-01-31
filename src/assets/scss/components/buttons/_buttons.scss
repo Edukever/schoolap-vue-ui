@@ -24,6 +24,7 @@
     font-weight: 600;
 
     .title {
+        font-family: $font-family-sans-serif;
         font-weight: 570;
         font-size: 15px;
     }
@@ -31,6 +32,7 @@
         font-weight: 570;
         margin-left: 1px;
         font-size: 15px;
+        font-family: $font-family-sans-serif;
     }
 
     .svg-right {
@@ -98,14 +100,24 @@
     position: relative;
     gap: 15px;
 
-    .title-left {
+
+    .title {
+        font-family: $font-family-sans-serif;
         font-weight: 570;
+        font-size: 15px;
+    }
+
+    .title-left {
+        font-family: $font-family-sans-serif;
+        font-weight: 570;
+        font-size: 15px;
     }
 
     .svg-left svg path {
         stroke: $color-orange;
     }
     .title-google {
+        // font-family: $font-family-sans-serif;
         font-size: 16px;
         color: $color-noir;
     }
@@ -122,4 +134,32 @@
             
         }
     }    
+}
+
+.sp-btn-arrow-right {
+    @extend .sp-btn-back;
+    color: white;
+    background-color: $color-orange;
+
+    .title {
+        font-family: $font-family-sans-serif;
+        font-weight: 570;
+        font-size: 15px;
+    }
+
+    .title-left {
+        font-family: $font-family-sans-serif;
+        font-weight: 570;
+        font-size: 15px;
+    }
+
+    .svg-left svg path {
+        stroke: white;
+    }
+
+    .svg-right svg path {
+        stroke: white;
+    }
+
+    
 }
