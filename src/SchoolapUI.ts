@@ -23,6 +23,7 @@ import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
 import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
 import SPCardVideo from './components/cards/SPCardVideo.vue'
+import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 
 import './assets/scss/main.scss'
 
@@ -54,6 +55,8 @@ const SchoolapUI = {
     app.component('sp-card-profil-school', SPCardProfilSchool)
     app.component('sp-card-pricing', SPCardPricing)
     app.component('sp-card-video', SPCardVideo)
+    app.component('sp-file-upload', SPFileUpload)
+
   }
 }
 
