@@ -2,7 +2,16 @@
   <div class="sp-core-container">
     <SPSideBar />
     <main>
-      <SPCardProfilSchool />
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <SPCardProfilSchool />
+          </div>
+          <div class="col-4">
+            <SPCardPricing />
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -26,6 +35,7 @@ import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
+import SPCardPricing from './components/cards/SPCardPricing.vue'
 
 export default {
 
@@ -44,7 +54,8 @@ export default {
       // SPButtonGoogle,
       // SPBannerLogin,
       SPSideBar,
-      SPCardProfilSchool 
+      SPCardProfilSchool ,
+      SPCardPricing
     }
 
 }

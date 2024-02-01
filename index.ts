@@ -18,6 +18,8 @@ import logoWhite from './src/components/icons/logoWhite.vue';
 import SPButtonToggleSideBar from './src/components/buttons/SPButtonSideBar.vue';
 import iconDashboard from './src/components/icons/iconDashboard.vue';
 import iconBar from './src/components/icons/iconBar.vue';
+import SPCardPricing from './src/components/cards/SPCardPricing.vue';
+import SPCardProfilSchool from './src/components/cards/SPCardProfilSchool.vue';
 
 export {
     SPButtonPrimary,
@@ -37,7 +39,9 @@ export {
     SPButtonToggleSideBar,
     iconUnderline,
     iconDashboard,
-    iconBar
+    iconBar,
+    SPCardPricing,
+    SPCardProfilSchool
 }
 import SchoolapUI from './src/SchoolapUI'
 
