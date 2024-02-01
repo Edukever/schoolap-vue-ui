@@ -19,8 +19,9 @@ import SPBreadCrump from './components/breadcrump/SPBreadcrump.vue'
 import SPCardActivity from './components/cards/SPCardActivity.vue'
 import SPStat from './components/cards/SPStat.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
+import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
+import SPCardPricing from './components/cards/SPCardPricing.vue'
 import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
-
 
 import './assets/scss/main.scss'
 
@@ -49,6 +50,8 @@ const SchoolapUI = {
     app.component('sp-card-activity', SPCardActivity)
     app.component('sp-button-icon-arrow-right', SPButtonIconArrowRight)
     app.component('sp-side-bar', SPSideBar)
+    app.component('sp-card-profil-school', SPCardProfilSchool)
+    app.component('sp-card-pricing', SPCardPricing)
   }
 }
 

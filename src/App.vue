@@ -2,7 +2,16 @@
   <div class="sp-core-container">
     <SPSideBar />
     <main>
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati magni, non rerum quod ducimus eveniet eos optio eius animi modi iste similique repellat asperiores sed quasi debitis! Iusto, dolorum?</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <SPCardProfilSchool />
+          </div>
+          <div class="col-4">
+            <SPCardPricing />
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -25,6 +34,8 @@ import SPTextarea from './components/forms/inputs/SPTextarea.vue'
 import SPSelect from './components/forms/select/SPSelect.vue'
 import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
+import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
+import SPCardPricing from './components/cards/SPCardPricing.vue'
 
 export default {
 
@@ -42,7 +53,9 @@ export default {
       // SPTextarea,
       // SPButtonGoogle,
       // SPBannerLogin,
-      SPSideBar
+      SPSideBar,
+      SPCardProfilSchool ,
+      SPCardPricing
     }
 
 }
