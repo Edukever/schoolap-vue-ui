@@ -50,6 +50,7 @@ import iconDashboard from '../../icons/iconDashboard.vue';
 import iconBar from '../../icons/iconBar.vue';
 
 export default {
+  name: "SPSideBar",
   components: {
     iconVector,
     logoWhite,
