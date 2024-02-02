@@ -1,7 +1,9 @@
 .sp-label {
+    font-family: $font-family-sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 40px;
-    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0em;
 }
 
 .sp-form-control {
@@ -19,8 +21,12 @@
     color: $color-noir;
     
     &::placeholder {
-        font-size: 15px;
         color: $color-gris-2;
+        font-family: $font-family-sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0px;
     }
 }
 
@@ -112,7 +118,7 @@
         font-weight: 600;
         position: absolute;
         right: .95em;
-        top: 3.70em;
+        top: 2.85em;
         z-index: 9;
     }
 

@@ -53,7 +53,13 @@
         width: 340px;
         margin-left: -20px;
         text-align: center;
-        // margin-top: 42px;
+        font-weight: 400;
+
+        a {
+            font-weight: 450;
+            color: $color-orange;
+            text-decoration: underline;
+        }
     }
     
 }
