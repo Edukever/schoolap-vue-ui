@@ -21,6 +21,7 @@ import iconBar from './src/components/icons/iconBar.vue';
 import SPCardPricing from './src/components/cards/SPCardPricing.vue';
 import SPCardProfilSchool from './src/components/cards/SPCardProfilSchool.vue';
 import SPCardRapportPresence from './src/components/cards/SPCardRapportPresence.vue';
+import SPCardRapportPresenceTwo from './src/components/cards/SPCardRapportPresenceTwo.vue';
 
 export {
     SPButtonPrimary,
@@ -43,7 +44,8 @@ export {
     iconBar,
     SPCardPricing,
     SPCardProfilSchool,
-    SPCardRapportPresence
+    SPCardRapportPresence,
+    SPCardRapportPresenceTwo
 }
 import SchoolapUI from './src/SchoolapUI'
 
