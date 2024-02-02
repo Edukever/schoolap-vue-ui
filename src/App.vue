@@ -8,8 +8,7 @@
             <SPCardProfilSchool />
           </div>
           <div class="col-4">
-            <!-- <SPCardPricing /> -->
-            <SPModalRight></SPModalRight>
+            <SPCardPricing />
           </div>
         </div>
       </div>
