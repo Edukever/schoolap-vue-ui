@@ -28,6 +28,7 @@ export default {
     methods: {
         onInput(event) {
           this.$emit('textareaField', event.target.value)
+          this.$emit('update:modelValue', event.target.value)
         }
     }
 }

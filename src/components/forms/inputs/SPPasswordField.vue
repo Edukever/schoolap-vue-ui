@@ -68,6 +68,7 @@ export default {
 
         emitInput(event) {
           this.$emit('passwordField', event.target.value)
+          this.$emit('update:modelValue', event.target.value)
         }
     }
 }
