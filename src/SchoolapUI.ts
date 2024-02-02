@@ -21,6 +21,7 @@ import SPStat from './components/cards/SPStat.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
+import SPCardOtherAction from './components/cards/SPCardOtherAction.vue'
 
 import './assets/scss/main.scss'
 
@@ -50,6 +51,7 @@ const SchoolapUI = {
     app.component('sp-side-bar', SPSideBar)
     app.component('sp-card-profil-school', SPCardProfilSchool)
     app.component('sp-card-pricing', SPCardPricing)
+    app.component('sp-card-other-action', SPCardOtherAction)
   }
 }
 
