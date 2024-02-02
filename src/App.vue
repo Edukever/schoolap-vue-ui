@@ -8,7 +8,8 @@
             <SPCardProfilSchool />
           </div>
           <div class="col-4">
-            <SPCardPricing />
+            <!-- <SPCardPricing /> -->
+            <SPModalRight></SPModalRight>
           </div>
         </div>
       </div>
@@ -36,6 +37,7 @@ import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
+import SPModalRight from './components/modal/SPModalRight.vue'
 
 export default {
 
@@ -55,7 +57,8 @@ export default {
       // SPBannerLogin,
       SPSideBar,
       SPCardProfilSchool ,
-      SPCardPricing
+      SPCardPricing,
+      SPModalRight
     }
 
 }
