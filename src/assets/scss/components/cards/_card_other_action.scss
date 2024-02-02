@@ -1,0 +1,63 @@
+.sp-card-other-action{
+    border: solid #ABABAB 1px;
+    border-radius: 15px;
+    .sp-card-orther-action-body{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+
+        .sp-icon-left{
+            flex: 0 0 auto;
+            width: 20%;
+
+            .sp-icon{
+                border: solid $color-bleu-light 1px;
+                width: 60px;
+                height: 60px;
+                background: $color-bleu-light;
+                border-radius: 50%;
+
+                svg{
+                    display: flex;
+                    align-items: center;
+                    margin:15px auto;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .sp-card-orther-action-content{
+            flex: 0 0 auto;
+            width: 40%;
+
+            .sp-card-orther-action-content-title{
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+        }
+
+        .sp-icon-right{
+            flex: 0 0 auto;
+            width: 40%;
+
+            .sp-bleu-btn{
+                width: 100%;
+                padding: 10px 15px;
+                justify-content: space-between;
+                text-align: left;
+                font-size: 10px;
+                border: none;
+                background-color: $color-bleu;
+                border-radius: 10px;
+                color: $white;
+                svg{
+                    width: 21px;
+                    height: 21px;
+                }
+            }
+        }
+    }
+}

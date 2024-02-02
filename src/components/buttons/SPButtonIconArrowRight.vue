@@ -1,6 +1,6 @@
 <template>
     <button class="sp-btn-arrow-right" @click="handleButtonClick">
-        <template v-if="position == 'right'">
+        <template v-if="position === 'right'">
             <div class="title">{{ title }}</div>
             <div class="svg-right">
                 <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@
 <script>
 
 export default {
-    name: 'SPButtonGoogle',
+    name: 'SPButtonIconArrowRight',
     props: {
         title: String,
         position: {

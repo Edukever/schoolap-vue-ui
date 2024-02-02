@@ -15,10 +15,10 @@
     </button>
 </template>
 
-<script>
+<script lang="ts">
 
 export default {
-    name: 'SPButtonGoogle',
+    name: 'SPButtonIcon',
     props: {
         title: String,
         position: {
