@@ -17,12 +17,17 @@ export default {
         placeholder: {
             default: '',
             type: String
+        },
+        value: {
+            default: '',
+            type: String
         }
     },
 
     methods: {
         onInput(event) {
-            this.$emit('textareaField', event.target.value)
+          this.$emit('textareaField', event.target.value)
+          this.$emit('update:modelValue', event.target.value)
         }
     }
 }
