@@ -1,7 +1,7 @@
 <template>
     <div class="sp-form-group">
         <label class="sp-label">{{ label }}</label>
-        <input class="sp-form-control" @input="onInput"  :placeholder="placeholder" type="text" :value="value">
+        <input class="sp-form-control" @input="onInput"  :placeholder="placeholder" type="text" >
     </div>
 </template>
 
