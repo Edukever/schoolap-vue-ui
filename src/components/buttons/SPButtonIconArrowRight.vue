@@ -28,7 +28,7 @@
 <script>
 
 export default {
-    name: 'SPButtonGoogle',
+    name: 'SPButtonIconArrowRight',
     props: {
         title: String,
         position: {

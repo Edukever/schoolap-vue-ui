@@ -1,14 +1,15 @@
 <template>
     <div class="sp-form-group">
         <label class="sp-label">{{ label }}</label>
-        <textarea class="sp-form-textarea" @input="onInput"  :placeholder="placeholder"></textarea>
+        <textarea class="sp-form-textarea"  :placeholder="placeholder"></textarea>
     </div>
 </template>
 
 <script>
 
 export default {
-    name: 'SPSearchBar',
+    name: 'SPTextarea',
+    
     props: {
         label: {
             default: '',
