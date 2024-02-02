@@ -11,7 +11,7 @@
         </div>
         <div class="sp-button-position">
             <SPButtonPrimary @button-clicked="start" :title="'Commencer'"></SPButtonPrimary>
-            <div class="paragraph">En cliquant sur “ commencer “, vous confirmez avoir lu et accepté nos Conditions d’utilisation et notre Politique de confidentialité</div>
+            <div class="paragraph">En cliquant sur “ commencer “, vous confirmez avoir lu et accepté nos <a>Conditions d’utilisation</a> et notre <a>Politique de confidentialité</a></div>
         </div>
 
     </div>
