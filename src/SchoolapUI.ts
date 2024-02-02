@@ -56,7 +56,6 @@ const SchoolapUI = {
     app.component('sp-card-pricing', SPCardPricing)
     app.component('sp-card-video', SPCardVideo)
     app.component('sp-file-upload', SPFileUpload)
-
   }
 }
 

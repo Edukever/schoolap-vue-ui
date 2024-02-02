@@ -1,21 +1,30 @@
 <template>
     <div class="sp-form-radio">
-        <input id="attr" name="radio" type="radio" v-model="isChecked" @change="handleRadioChange">
-        <label for="attr" class="radio-label">{{ label }}</label>
+        <input :id="uniqueId" name="radio" :value="value" type="radio" v-model="isChecked" @change="handleRadioChange">
+        <label :for="uniqueId" class="radio-label">{{ label }}</label>
     </div>
 </template>
 
 
 <script lang="ts">
 export default {
-    name: 'SPSearchBar',
+    name: 'SPRadio',
     props: {
         placeholder: {
             type: String
         },
         label: {
             type: String
+        },
+        value: {
+            default: null
         }
+    },
+
+    computed: {
+        uniqueId() {
+            return `radio-${Math.random().toString(36).substr(2, 9)}`;
+        },
     },
 
     data() {

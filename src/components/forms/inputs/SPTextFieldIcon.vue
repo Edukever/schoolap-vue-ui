@@ -11,7 +11,7 @@
 <script>
 
 export default {
-    name: 'SPSearchBar',
+    name: 'SPTextFieldIcon',
     props: {
         icon: {
             type: String
