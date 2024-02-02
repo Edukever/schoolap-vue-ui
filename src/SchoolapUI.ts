@@ -9,6 +9,7 @@ interface SchoolapUIPluginOptions {}
 
 const SchoolapUI = {
   install(app: App, options?: SchoolapUIPluginOptions) {
+    
     const components = glob.sync(path.resolve(__dirname, './components/**/SP*.vue'))
 
     components.forEach((componentPath) => {
@@ -25,7 +26,6 @@ const SchoolapUI = {
       document.body.appendChild(element)
       app.mount(element)
     })
-
   }
 }
 
