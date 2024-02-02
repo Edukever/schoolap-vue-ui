@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
 
     name: 'SPFileUpload',
@@ -17,7 +17,7 @@ export default {
     },
 
     methods: {
-        handleFileChange(event) {
+        handleFileChange(event: any) {
             const selectedFile = event.target.files[0];
             this.$emit('file-selected', selectedFile);
         },
