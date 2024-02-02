@@ -29,6 +29,7 @@ export default {
     methods: {
         onInput(event) {
             this.$emit('search', event.target.value)
+          this.$emit('update:modelValue', event.target.value)
         }
     }
 }

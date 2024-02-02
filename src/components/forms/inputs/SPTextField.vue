@@ -27,6 +27,7 @@ export default {
     methods: {
         onInput(event) {
           this.$emit('textField', event.target.value)
+          this.$emit('update:modelValue', event.target.value)
         }
     }
 }
