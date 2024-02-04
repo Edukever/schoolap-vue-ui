@@ -1,7 +1,7 @@
 <template>
     <div class="sp-form-radio">
-        <input id="check" type="checkbox" v-model="isChecked" @input="handleCheckboxChange">
-        <label for="check" class="sp-label-box">
+        <input :id="uniqueId" type="checkbox" v-model="isChecked" @input="handleCheckboxChange">
+        <label :for="uniqueId" class="sp-label-box">
             {{ label }}
         </label>     
     </div>
@@ -17,6 +17,13 @@ export default {
             type: String
         }
     },
+    
+    computed: {
+        uniqueId() {
+            return `radio-${Math.random().toString(36).substr(2, 9)}`;
+        },
+    },
+
     data() {
         return {
             isChecked: false

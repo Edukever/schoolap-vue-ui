@@ -18,11 +18,13 @@
 @import "cards/card_pricing";
 @import "cards/card_other_action";
 @import "cards/card_rapport_presence";
+@import "cards/card_video";
 
 // Forms
 @import "forms/text-field";
 @import 'forms/radio';
 @import 'forms/check-box';
+@import 'forms/upload_file';
 
 //navigation
 @import 'navigation/sidebar/sidebar';
