@@ -42,6 +42,8 @@
 <script>
 import SPCustomSelect from '../forms/select/SPCustomSelect.vue'
 export default {
+  name: 'SPCardPresence',
+
   components: {
     SPCustomSelect
   },

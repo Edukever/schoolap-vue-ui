@@ -47,6 +47,8 @@
 
 <script>
 export default {
+
+  name: 'SPCustomSelect',
   props: {
     options: {
       type: Array,

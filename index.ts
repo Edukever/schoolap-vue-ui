@@ -24,6 +24,8 @@ import SPCardRapportPresence from './src/components/cards/SPCardRapportPresence.
 import SPCardRapportPresenceTwo from './src/components/cards/SPCardRapportPresenceTwo.vue';
 import SPCustomSelect from './src/components/forms/select/SPCustomSelect.vue';
 import SPCardPresence from './src/components/cards/SPCardPresence.vue';
+import SPPagination from './src/components/navigation/pagination/SPPagination.vue';
+
 
 export {
     SPButtonPrimary,
@@ -49,7 +51,8 @@ export {
     SPCardRapportPresence,
     SPCardRapportPresenceTwo,
     SPCustomSelect,
-    SPCardPresence
+    SPCardPresence,
+    SPPagination
 }
 import SchoolapUI from './src/SchoolapUI'
 

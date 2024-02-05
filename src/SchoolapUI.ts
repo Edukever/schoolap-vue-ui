@@ -25,6 +25,7 @@ import SPCardOtherAction from './components/cards/SPCardOtherAction.vue'
 import SPCardRapportPresence from './components/cards/SPCardRapportPresence.vue'
 import SPCardRapportPresenceTwo from './components/cards/SPCardRapportPresenceTwo.vue'
 import SPCardPresence from './components/cards/SPCardPresence.vue'
+import SPPagination from './components/navigation/pagination/SPPagination.vue'
 
 import './assets/scss/main.scss'
 
@@ -58,6 +59,7 @@ const SchoolapUI = {
     app.component('sp-card-rapport-presence', SPCardRapportPresence)
     app.component('sp-card-rapport-presence-two', SPCardRapportPresenceTwo)
     app.component('sp-card-presence', SPCardPresence)
+    app.component('sp-pagination', SPPagination)
   }
 }
 
