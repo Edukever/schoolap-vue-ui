@@ -22,6 +22,8 @@ import SPCardPricing from './src/components/cards/SPCardPricing.vue';
 import SPCardProfilSchool from './src/components/cards/SPCardProfilSchool.vue';
 import SPCardRapportPresence from './src/components/cards/SPCardRapportPresence.vue';
 import SPCardRapportPresenceTwo from './src/components/cards/SPCardRapportPresenceTwo.vue';
+import SPCustomSelect from './src/components/forms/select/SPCustomSelect.vue';
+import SPCardPresence from './src/components/cards/SPCardPresence.vue';
 
 export {
     SPButtonPrimary,
@@ -45,7 +47,9 @@ export {
     SPCardPricing,
     SPCardProfilSchool,
     SPCardRapportPresence,
-    SPCardRapportPresenceTwo
+    SPCardRapportPresenceTwo,
+    SPCustomSelect,
+    SPCardPresence
 }
 import SchoolapUI from './src/SchoolapUI'
 

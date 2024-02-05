@@ -10,6 +10,9 @@
       }"
       @click="toggleOptions"
     >
+      <span class="sp-circle" v-if="withCircle">
+        <div></div>
+      </span>
       <span class="sp-value">{{ selectedOption ? selectedOption.title : placeholder }}</span>
       <slot name="icon-option" class="sp-icon"></slot>
     </div>
@@ -33,7 +36,9 @@
           :class="{ red: option.status === 'red', green: option.status !== 'red' }"
         >
           <span class="sp-value">{{ option.title }}</span>
-          <slot name="icon-option" class="sp-icon"></slot>
+          <div class="sp-svg">
+            <slot name="icon-option" class="sp-icon"></slot>
+          </div>
         </div>
       </label>
     </div>
@@ -46,6 +51,10 @@ export default {
     options: {
       type: Array,
       required: true
+    },
+    withCircle: {
+      type: Boolean,
+      default: false
     },
     placeholder: {
       type: String,
@@ -60,6 +69,11 @@ export default {
     return {
       showOptions: false,
       selectedOption: null
+    }
+  },
+  created() {
+    if (this.options && this.options.length > 0) {
+      this.selectedOption = this.options[0]
     }
   },
   methods: {
