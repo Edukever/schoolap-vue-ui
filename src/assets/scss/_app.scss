@@ -13,6 +13,7 @@ img {
     main {
         padding: 1.7vw 1.7vw;
         max-width: 94%;
+        flex-wrap: wrap;
         width: 100%;
         border: solid $color-vert 1px;
         overflow-x: hidden;
