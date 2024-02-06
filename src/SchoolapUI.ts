@@ -27,7 +27,9 @@ import SPCardRapportPresenceTwo from './components/cards/SPCardRapportPresenceTw
 import SPCardPresence from './components/cards/SPCardPresence.vue'
 import SPPagination from './components/navigation/pagination/SPPagination.vue'
 import SPCardNotification from './components/cards/SPCardNotification.vue'
-
+import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
+import SPCardVideo from './components/cards/SPCardVideo.vue'
+import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -53,6 +55,7 @@ const SchoolapUI = {
     app.component('sp-bread-crump', SPBreadCrump)
     app.component('sp-stat', SPStat)
     app.component('sp-card-activity', SPCardActivity)
+    app.component('sp-button-icon-arrow-right', SPButtonIconArrowRight)
     app.component('sp-side-bar', SPSideBar)
     app.component('sp-card-profil-school', SPCardProfilSchool)
     app.component('sp-card-pricing', SPCardPricing)
@@ -62,6 +65,8 @@ const SchoolapUI = {
     app.component('sp-card-presence', SPCardPresence)
     app.component('sp-pagination', SPPagination)
     app.component('sp-card-notification', SPCardNotification)
+    app.component('sp-card-video', SPCardVideo)
+    app.component('sp-file-upload', SPFileUpload)
   }
 }
 
