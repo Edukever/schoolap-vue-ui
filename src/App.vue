@@ -34,6 +34,7 @@ import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
+import SPCardArchive from './components/cards/SPCardArchive.vue'
 
 export default {
 
@@ -52,6 +53,7 @@ export default {
       // SPButtonGoogle,
       // SPBannerLogin,
       SPSideBar,
+      SPCardArchive,
       SPCardProfilSchool ,
       SPCardPricing
     }
