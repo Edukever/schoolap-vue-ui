@@ -26,6 +26,7 @@ import SPCustomSelect from './src/components/forms/select/SPCustomSelect.vue';
 import SPCardPresence from './src/components/cards/SPCardPresence.vue';
 import SPPagination from './src/components/navigation/pagination/SPPagination.vue';
 import SPCardNotification from './src/components/cards/SPCardNotification.vue';
+import SPCardOption from './src/components/cards/SPCardOption.vue';
 
 
 export {
@@ -54,7 +55,8 @@ export {
     SPCustomSelect,
     SPCardPresence,
     SPPagination,
-    SPCardNotification
+    SPCardNotification,
+    SPCardOption
 }
 import SchoolapUI from './src/SchoolapUI'
 
