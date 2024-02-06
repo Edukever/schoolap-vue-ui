@@ -1,0 +1,65 @@
+.sp-card-archive {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    background: #E5F9FF;
+    position: relative;
+
+    .sp-card-option {
+        top: 10%;
+        width: 100vh;
+        z-index: 50;
+    }
+
+    .sp-card-archive-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .sp-content-svg {
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+
+            .sp-svg {
+                padding: 10px 0;
+                margin-left: 10px;
+
+                svg {
+                    display: block;
+                    margin: 0 auto;
+                    width: 70px;
+                    height: 70px;
+                    object-fit: scale-down;
+
+                    path {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+
+        .sp-option {
+            svg {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .sp-detail {
+        text-align: center;
+
+        .sp-subtitle {
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #ABABAB;
+        }
+
+        .sp-title {
+            font-size: 13.666px;
+        }
+    }
+}
