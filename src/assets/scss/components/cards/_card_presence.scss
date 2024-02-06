@@ -1,0 +1,64 @@
+.sp-card-presence {
+    max-height: 100px;
+
+    .sp-card-presence-content {
+        display: flex;
+        z-index: 4;
+        width: 100%;
+        border: solid $color-gris-1 1px;
+        border-radius: 14px;
+        background: $white;
+        height: 90px;
+        padding: 10px 15px;
+        box-shadow: 0 .125rem 5px -.0625rem rgba(12, 26, 36, .1), 0 .0625rem .0625rem 0 rgba(12, 26, 36, .04) !important;
+
+        .sp-user-infos {
+            max-width: 70%;
+            width: 100%;
+            display: flex;
+
+            .sp-user-infos__avatar {
+                height: 100%;
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 10px;
+                }
+            }
+
+            .sp-user-infos__name {
+                display: block;
+                width: 100%;
+                margin: auto 0;
+
+                h3 {
+                    font-weight: 600;
+                    color: $black;
+                    margin-bottom: 0;
+                    font-size: 18px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    color: $color-bleu;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .sp-content-select {
+            width: 30%;
+            display: block;
+            margin: auto 0;
+
+            .sp-custom-select {
+                border: transparent 1px solid;
+            }
+        }
+    }
+}
