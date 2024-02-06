@@ -5,10 +5,10 @@
 
 </template>
 
-<script>
+<script lang="ts">
 
 export default {
-    name: 'SPButtonGoogle',
+    name: 'SPButtonPrimary',
     props: {
         title: String,
     },

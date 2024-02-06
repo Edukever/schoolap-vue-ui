@@ -22,12 +22,14 @@
 @import "cards/card_notification";
 @import "cards/card_option";
 @import "cards/card_archive";
+@import "cards/card_video";
 
 // Forms
 @import "forms/text-field";
 @import 'forms/radio';
 @import 'forms/check-box';
 @import 'forms/custom_select';
+@import 'forms/upload_file';
 
 //navigation
 @import 'navigation/sidebar/sidebar';
