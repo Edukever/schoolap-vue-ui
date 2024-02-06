@@ -21,10 +21,17 @@ import SPStat from './components/cards/SPStat.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
+import SPCardOtherAction from './components/cards/SPCardOtherAction.vue'
+import SPCardRapportPresence from './components/cards/SPCardRapportPresence.vue'
+import SPCardRapportPresenceTwo from './components/cards/SPCardRapportPresenceTwo.vue'
+import SPCardPresence from './components/cards/SPCardPresence.vue'
+import SPPagination from './components/navigation/pagination/SPPagination.vue'
+import SPCardNotification from './components/cards/SPCardNotification.vue'
+import SPCardOption from './components/cards/SPCardOption.vue'
+import SPCardArchive from './components/cards/SPCardArchive.vue'
 import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.vue'
 import SPCardVideo from './components/cards/SPCardVideo.vue'
 import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
-
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -54,6 +61,14 @@ const SchoolapUI = {
     app.component('sp-side-bar', SPSideBar)
     app.component('sp-card-profil-school', SPCardProfilSchool)
     app.component('sp-card-pricing', SPCardPricing)
+    app.component('sp-card-other-action', SPCardOtherAction)
+    app.component('sp-card-rapport-presence', SPCardRapportPresence)
+    app.component('sp-card-rapport-presence-two', SPCardRapportPresenceTwo)
+    app.component('sp-card-presence', SPCardPresence)
+    app.component('sp-pagination', SPPagination)
+    app.component('sp-card-notification', SPCardNotification)
+    app.component('sp-card-option', SPCardOption)
+    app.component('sp-card-archive', SPCardArchive)
     app.component('sp-card-video', SPCardVideo)
     app.component('sp-file-upload', SPFileUpload)
   }

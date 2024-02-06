@@ -20,6 +20,15 @@ import iconDashboard from './src/components/icons/iconDashboard.vue';
 import iconBar from './src/components/icons/iconBar.vue';
 import SPCardPricing from './src/components/cards/SPCardPricing.vue';
 import SPCardProfilSchool from './src/components/cards/SPCardProfilSchool.vue';
+import SPCardRapportPresence from './src/components/cards/SPCardRapportPresence.vue';
+import SPCardRapportPresenceTwo from './src/components/cards/SPCardRapportPresenceTwo.vue';
+import SPCustomSelect from './src/components/forms/select/SPCustomSelect.vue';
+import SPCardPresence from './src/components/cards/SPCardPresence.vue';
+import SPPagination from './src/components/navigation/pagination/SPPagination.vue';
+import SPCardNotification from './src/components/cards/SPCardNotification.vue';
+import SPCardOption from './src/components/cards/SPCardOption.vue';
+import SPCardArchive from './src/components/cards/SPCardArchive.vue';
+
 
 export {
     SPButtonPrimary,
@@ -41,7 +50,15 @@ export {
     iconDashboard,
     iconBar,
     SPCardPricing,
-    SPCardProfilSchool
+    SPCardProfilSchool,
+    SPCardRapportPresence,
+    SPCardRapportPresenceTwo,
+    SPCustomSelect,
+    SPCardPresence,
+    SPPagination,
+    SPCardNotification,
+    SPCardOption,
+    SPCardArchive
 }
 import SchoolapUI from './src/SchoolapUI'
 
