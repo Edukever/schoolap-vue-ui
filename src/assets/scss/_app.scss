@@ -10,27 +10,33 @@ img {
 
 .sp-core-container {
     display: flex;
+
     main {
         padding: 1.7vw 1.7vw;
         max-width: 94%;
         flex-wrap: wrap;
         width: 100%;
-        border: solid $color-vert 1px;
         overflow-x: hidden;
         overflow-y: scroll;
         height: 100vh;
     }
-  }
+}
 
 
 @media screen and (max-width: $breakpoint-mobile-xl) {
-    .sp-core-container{
+    .sp-core-container {
         flex-direction: row;
-        main{
+
+        main {
             transition: margin-left 0.5s;
         }
     }
 }
+
 @media screen and (min-width: $breakpoint-desktop-xxxl) {
-    
+    .sp-core-container {
+        main {
+            width: 100%;
+        }
+    }
 }
