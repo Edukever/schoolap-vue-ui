@@ -5,21 +5,21 @@
         </div>
         <h3 class="sp-title">{{ title }}</h3>
         <div class="sp-div-btn">
-            <SPButtonIcon class="sp-btn-bleu" :src="'/src/assets/img/icons/group-plus.svg'" :position="'left'" :title="action">
-            </SPButtonIcon>
+            <SPButtonPrimary class="sp-btn-bleu" :position="'left'" :title="action">
+            </SPButtonPrimary>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import SPButtonIcon from '../buttons/SPButtonIcon.vue'
+import SPButtonPrimary from '../buttons/SPButtonPrimary.vue'
 
 export default {
 
     name: 'SPCardActivity',
 
     components: {
-        SPButtonIcon,
+        SPButtonPrimary,
     },
 
     props: {

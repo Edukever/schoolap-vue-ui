@@ -1,0 +1,59 @@
+.sp-card-option {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background: $white;
+    max-width: 300px;
+    max-height: 90px;
+    overflow: hidden;
+    transition: all .3s;
+    box-shadow: 3.6400320529937744px 0px 21.840194702148438px 0px #B9D4D080;
+    
+    &.active {
+        display: block;
+    }
+    
+    .sp-card-content-option {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+
+        .sp-edit {
+            flex: 0 0 auto;
+            width: 33.3%;
+        }
+
+        .sp-detail {
+            flex: 0 0 auto;
+            width: 33.3%;
+            border-left: solid 1px #E5E5E5;
+            border-right: solid 1px #E5E5E5;
+        }
+
+        .sp-archive {
+            flex: 0 0 auto;
+            width: 33.3%;
+        }
+
+        .sp-archive,
+        .sp-edit,
+        .sp-detail {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+
+            p {
+                padding: 10px 0;
+            }
+
+            svg {
+                display: block;
+                margin: 0 auto;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

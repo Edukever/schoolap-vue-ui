@@ -17,12 +17,18 @@
 @import "cards/card_profil_school";
 @import "cards/card_pricing";
 @import "cards/card_other_action";
+@import "cards/card_rapport_presence";
+@import "cards/card_presence";
+@import "cards/card_notification";
+@import "cards/card_option";
+@import "cards/card_archive";
 @import "cards/card_video";
 
 // Forms
 @import "forms/text-field";
 @import 'forms/radio';
 @import 'forms/check-box';
+@import 'forms/custom_select';
 @import 'forms/upload_file';
 
 //navigation
@@ -30,6 +36,7 @@
 @import "forms/radio";
 @import "forms/check-box";
 @import "forms/select";
+@import "navigation/pagination/pagination";
 
 // Modal 
 @import "modal/modal-right";

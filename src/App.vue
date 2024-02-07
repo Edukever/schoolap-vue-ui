@@ -4,11 +4,11 @@
     <main>
       <div class="container">
         <div class="row">
-          <div class="col-8">
-            <SPCardProfilSchool />
+          <div class="col-2">
+            <SPCardArchive />
           </div>
-          <div class="col-4">
-            <SPCardPricing />
+          <div class="col-2">
+            <SPCardArchive />
           </div>
         </div>
       </div>
@@ -16,9 +16,7 @@
   </div>
 </template>
 
-
 <script>
-
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import SPButtonPrimary from './components/buttons/SPButtonPrimary.vue'
@@ -36,7 +34,7 @@ import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
-import SPModalRight from './components/modal/SPModalRight.vue'
+import SPCardArchive from './components/cards/SPCardArchive.vue'
 
 export default {
     name: 'App',
@@ -55,9 +53,9 @@ export default {
       // SPButtonGoogle,
       // SPBannerLogin,
       SPSideBar,
+      SPCardArchive,
       SPCardProfilSchool ,
-      SPCardPricing,
-      SPModalRight
+      SPCardPricing
     }
 
 }
