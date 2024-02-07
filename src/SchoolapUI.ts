@@ -31,6 +31,7 @@ interface SchoolapUIPluginOptions {}
 
 const SchoolapUI = {
   install(app: App, options?: SchoolapUIPluginOptions) {
+
     app.component('sp-button-primary', SPButtonPrimary)
     app.component('sp-button-google', SPButtonGoogle)
     app.component('sp-button-back', SPButtonBack)

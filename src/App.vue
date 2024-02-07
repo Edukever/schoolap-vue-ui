@@ -39,7 +39,7 @@ import SPCardPricing from './components/cards/SPCardPricing.vue'
 import SPModalRight from './components/modal/SPModalRight.vue'
 
 export default {
-
+    name: 'App',
     components: {
       // HelloWorld,
       // TheWelcome,

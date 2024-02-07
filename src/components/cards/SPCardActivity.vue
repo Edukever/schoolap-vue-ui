@@ -11,7 +11,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import SPButtonIcon from '../buttons/SPButtonIcon.vue'
 
 export default {
