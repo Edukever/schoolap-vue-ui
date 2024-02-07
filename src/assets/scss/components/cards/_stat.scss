@@ -19,7 +19,6 @@
         letter-spacing: 0px;
         margin-top: 7px;
         font-family: $font-family-sans-serif;
-
     }
 
     .sp_add {
@@ -53,6 +52,15 @@
             width: 35px; 
             height: 36px;
         }
+    }
+
+    .sp-stat-list {
+        font-family: $font-family-sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 23px;
+        letter-spacing: 0px;
+        margin-left: -12px;
     }
 
 }
