@@ -33,6 +33,7 @@ import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.
 import SPCardVideo from './components/cards/SPCardVideo.vue'
 import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 import SPCardPreviewFile from './components/cards/SPCardPreviewFile.vue'
+import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -73,6 +74,7 @@ const SchoolapUI = {
     app.component('sp-card-video', SPCardVideo)
     app.component('sp-file-upload', SPFileUpload)
     app.component('sp-card-preview-file', SPCardPreviewFile)
+    app.component('sp-custom-select', SPCustomSelect)
   }
 }
 

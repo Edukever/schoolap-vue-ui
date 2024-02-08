@@ -43,36 +43,12 @@
         height: 13px;
         width: 14px;
     }
-
-    &:hover {
-        // // color: $color-orange;
-        // background: $color-orange;
-
-        // .svg-left svg path {
-        //     stroke: $color-orange;
-        // }
-
-        // .svg-right svg path{
-        //     stroke: $color-orange; 
-        // }
-    }
 }
 
 @each $color, $value in $colors {
     .sp-btn-#{$color} {
         @extend .sp-btn;
         background: $value;
-  
-        // &:hover {
-        // //   color: $value;
-        //   background: $value;
-        //   .svg-left svg path {
-        //     stroke: $value;
-        //   }
-        //   .svg-right svg path {
-        //     stroke: $value; 
-        //   }
-        // }
     }
 }
 
@@ -159,7 +135,13 @@
 
     .svg-right svg path {
         stroke: white;
-    }
+    }  
+}
 
-    
+@each $color, $value in $colors {
+    .sp-btn-arrow-right-#{$color} {
+        @extend .sp-btn-arrow-right;
+        background: $value;
+        border: none;
+    }
 }
