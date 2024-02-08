@@ -28,6 +28,7 @@ import SPPagination from './src/components/navigation/pagination/SPPagination.vu
 import SPCardNotification from './src/components/cards/SPCardNotification.vue';
 import SPCardOption from './src/components/cards/SPCardOption.vue';
 import SPCardArchive from './src/components/cards/SPCardArchive.vue';
+import SPCardPreviewFile from './src/components/cards/SPCardPreviewFile.vue';
 
 
 export {
@@ -58,7 +59,8 @@ export {
     SPPagination,
     SPCardNotification,
     SPCardOption,
-    SPCardArchive
+    SPCardArchive,
+    SPCardPreviewFile
 }
 import SchoolapUI from './src/SchoolapUI'
 
