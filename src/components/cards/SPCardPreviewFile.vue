@@ -1,5 +1,5 @@
 <template>
-  <div class="sp-card-file-formular">
+  <div class="sp-card-file-formular" :class="{'error': isError}">
     <div class="sp-card-formular-header">
       <div class="sp-icon-file">
         <svg
@@ -85,7 +85,7 @@
               </svg>
             </div>
             <p class="sp-text">
-              {{ item }}
+                {{ item }}
             </p>
           </div>
         </template>
@@ -96,22 +96,27 @@
 
 <script>
 export default {
-  props: {
-    title: {
-      type: String,
-      default: 'Procédure pour importer le fichier Exel :'
-    },
-    subtitle: {
-      type: String,
-      default: 'Ces champs sont obligatoire'
-    },
-    content: {
-      type: Array,
-      default: () => [
-        'Votre document ne doit pas avoir de caractères spéciaux ( # | ? ; , . ` \' ")'
-      ]
+    props:{
+        title: {
+            type: String,
+            default: "Procédure pour importer le fichier Exel :"
+        },
+        subtitle:{
+            type: String,
+            default: "Ces champs sont obligatoire"
+        },
+        content: {
+            type: Array,
+            default: () => [
+                "Votre document ne doit pas avoir de caractères spéciaux ( # | ? ; , . ` ' \")"
+            ]
+        },
+        isError: {
+            type: Boolean,
+            default: false
+        }
+    
     }
-  }
 }
 </script>
 
