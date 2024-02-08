@@ -1,0 +1,127 @@
+.sp-card-file-formular {
+    border-radius: 18px;
+    padding: 20px 25px 14px 25px;
+    background: #E5F9FF;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+    max-height: 100%;
+
+    &.error {
+        background: #FFE1E1;
+
+        .sp-card-formular-header {
+            .sp-title {
+                font-size: 16px;
+                font-weight: 400;
+                color: #FF0000;
+                margin-bottom: 10px;
+            }
+
+            .sp-subtitle {
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+
+            .sp-icon-file {
+                padding-top: 10px;
+                margin-top: 30px;
+
+                svg:first-child {
+                    display: none;
+                }
+
+                svg:last-child {
+                    display: block;
+                }
+            }
+
+            .sp-content-img {
+                display: none;
+            }
+
+            .sp-content-error {
+                display: block;
+                padding: 15px 10px 0;
+                margin-top: 10px;
+
+                .sp-error-badget {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    margin: 2rem 0;
+
+                    .sp-icon {
+                        width: 6%;
+                        border-radius: 4px;
+                        background: #FF5050;
+                        height: 27px;
+                        padding: 2px;
+
+                        svg {
+                            display: block;
+                            margin: 0 auto;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .sp-text {
+                        align-items: center;
+                        width: 90%;
+                        margin: 0 10px;
+                        font-size: 12.2px;
+                        font-weight: 300;
+                    }
+                }
+
+                .sp-error-badget:first-child {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+
+    .sp-card-formular-header {
+        padding: 0 25px;
+        margin: 10px 0;
+        text-align: start;
+
+        .sp-title {
+            font-size: 19px;
+            font-weight: 400;
+            color: #41A3DF;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .sp-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+
+        .sp-icon-file {
+
+            svg {
+                width: 65px;
+                height: 65px;
+            }
+
+            svg:last-child {
+                display: none;
+            }
+        }
+
+        .sp-content-error {
+            display: none;
+        }
+    }
+
+}
