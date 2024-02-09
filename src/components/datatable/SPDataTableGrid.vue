@@ -14,6 +14,7 @@
 <script>
 import SPPagination from '../navigation/pagination/SPPagination.vue'
 export default {
+    name: 'SPDataTableGrid',
     components: {
         SPPagination
     },
