@@ -18,12 +18,12 @@
     </div>
     <input type="checkbox" v-model="showOptions" :disabled="disabled" hidden />
     <div class="sp-options" v-show="showOptions">
-      <label
-        v-for="option in options"
-        :key="option.id"
+      <div
+        v-for="(option, index) in options"
+        :key="index"
         class="option"
         :class="{ selected: option === selectedOption, disabled: option.disabled }"
-        @click="selectOption(option)"
+        @click.stop="selectOption(option)"
       >
         <input
           type="radio"
@@ -40,14 +40,13 @@
             <slot name="icon-option" class="sp-icon"></slot>
           </div>
         </div>
-      </label>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
   name: 'SPCustomSelect',
   props: {
     options: {
@@ -65,6 +64,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    defaultValue: {
+      type: Number,
+      default: 0
     }
   },
   data() {
@@ -73,11 +76,16 @@ export default {
       selectedOption: null
     }
   },
-  created() {
-    if (this.options && this.options.length > 0) {
-      this.selectedOption = this.options[0]
-    }
+  mounted() { 
+      this.selectedOption = this.options.find((option) => option.id == this.defaultValue)
   },
+  // created() {
+  //   if (this.defaultValue == 0) {
+  //     this.selectedOption = this.options.find((option) => option.id === this.defaultValue)
+  //   } else {
+  //     this.selectedOption = this.options[0]
+  //   }
+  // },
   methods: {
     toggleOptions() {
       if (!this.disabled) {
@@ -88,6 +96,7 @@ export default {
       if (!option.disabled) {
         this.selectedOption = option
         this.showOptions = false
+        this.$emit('change', option)
       }
     }
   }

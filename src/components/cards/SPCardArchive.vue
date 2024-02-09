@@ -49,7 +49,8 @@ export default {
         subtitle: {
             type: String,
             default: '1 documents'
-        }
+        },
+        
     },
     data(){
         return{
