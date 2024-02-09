@@ -3,14 +3,26 @@
     <SPSideBar />
     <main>
       <div class="container">
-        <div class="row">
-          <div class="col-2">
-            <SPCardArchive />
-          </div>
-          <div class="col-2">
-            <SPCardArchive />
-          </div>
-        </div>
+        <SPDataTableGrid
+          :dataList="dataList"
+          :columnClass="isFourColumns"
+          perPage="9"
+          itemsPerPage="9"
+        >
+          <template v-slot="{ item }">
+            <!-- <SPCardPresence
+              :name="item.name"
+              :item="item"
+              :index="item.id"
+              @change="handleSelectChange"
+              :attended="item.attented"
+              :id="item.id"
+              :key="item.id"
+            /> -->
+            <!-- <SPCardArchive :item="item" :titleFolder="item.name" :index="index" :key="item.id" /> -->
+            <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" />
+          </template>
+        </SPDataTableGrid>
       </div>
     </main>
   </div>
@@ -35,29 +47,58 @@ import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
 import SPCardArchive from './components/cards/SPCardArchive.vue'
+import SPCardPreviewFile from './components/cards/SPCardPreviewFile.vue'
+import SPDataTableGrid from './components/datatable/SPDataTableGrid.vue'
+import SPCardPresence from './components/cards/SPCardPresence.vue'
+import SPCardRapportPresence from './components/cards/SPCardRapportPresence.vue'
+import SPCardRapportPresenceTwo from './components/cards/SPCardRapportPresenceTwo.vue'
 
 export default {
-
-    components: {
-      // HelloWorld,
-      // TheWelcome,
-      // SPButtonPrimary,
-      // SPButtonBack,
-      // SPButtonIcon,
-      // SPTextField,
-      // SPSearchBar,
-      // SPRadio,
-      // SPCheckBox,
-      // SPTextFieldIcon,
-      // SPTextarea,
-      // SPButtonGoogle,
-      // SPBannerLogin,
-      SPSideBar,
-      SPCardArchive,
-      SPCardProfilSchool ,
-      SPCardPricing
+  components: {
+    // HelloWorld,
+    // TheWelcome,
+    // SPButtonPrimary,
+    // SPButtonBack,
+    // SPButtonIcon,
+    // SPTextField,
+    // SPSearchBar,
+    // SPRadio,
+    // SPCheckBox,
+    // SPTextFieldIcon,
+    // SPTextarea,
+    // SPButtonGoogle,
+    // SPBannerLogin,
+    SPSideBar,
+    SPCardArchive,
+    SPCardProfilSchool,
+    SPCardPricing,
+    SPCardPreviewFile,
+    SPDataTableGrid,
+    SPCardPresence,
+    SPCardRapportPresence,
+    SPCardRapportPresenceTwo
+  },
+  data() {
+    return {
+      isFourColumns: 'sp-col-6',
+      dataList: [
+        { id: 1, name: 'michael 1', attented: true },
+        { id: 2, name: 'michael 2', attented: false },
+        { id: 3, name: 'michael 3', attented: true },
+        { id: 4, name: 'michael 4', attented: false },
+        { id: 5, name: 'michael 5', attented: true },
+        { id: 6, name: 'michael 6', attented: true },
+        { id: 7, name: 'michael', attented: true },
+        { id: 8, name: 'michael', attented: true },
+        { id: 9, name: 'michael', attented: true }
+      ]
     }
-
+  },
+  methods: {
+    handleSelectChange(value) {
+      // console.log('moi', value)
+    }
+  }
 }
 </script>
 
