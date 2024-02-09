@@ -6,7 +6,15 @@
                 <img :src="svg">
                 <span class="counter">{{ counter }}</span>
             </div>
-            <h3 class="sp_add">{{ description }}</h3>
+            <template v-if="showOnlyDescription">
+                <h3 class="sp_add">{{ description }}</h3>
+            </template>
+            <template v-else>
+                <ul class="sp-stat-list">
+                    <li>{{ number_men }}</li>
+                    <li> {{ number_women }}</li>
+                </ul>
+            </template>
 
         </div>
         <div class="bloc_two">
@@ -27,6 +35,18 @@ export default {
         counter: {
             default: 0,
             type: Number
+        },
+        showOnlyDescription: {
+            type: Boolean,
+            default: true
+        },
+        number_men: {
+            default: '',
+            type: String
+        },
+        number_women: {
+            default: '',
+            type: String
         }
     }
 }
