@@ -29,7 +29,7 @@ import SPCardNotification from './src/components/cards/SPCardNotification.vue';
 import SPCardOption from './src/components/cards/SPCardOption.vue';
 import SPCardArchive from './src/components/cards/SPCardArchive.vue';
 import SPCardPreviewFile from './src/components/cards/SPCardPreviewFile.vue';
-import SPDataTableGrid from './src/components/tables/SPDataTableGrid.vue';
+import SPDataTableGrid from './src/components/datatable/SPDataTableGrid.vue';
 
 
 export {
