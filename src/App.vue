@@ -7,8 +7,8 @@
           <div class="col-2">
             <SPCardArchive />
           </div>
-          <div class="col-md-8">
-            <SPFileUpload :title="'choisir'" />
+          <div class="col-2">
+            <SPCardArchive />
           </div>
         </div>
       </div>
@@ -35,7 +35,6 @@ import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
 import SPCardArchive from './components/cards/SPCardArchive.vue'
-import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 
 export default {
 
@@ -53,7 +52,6 @@ export default {
       // SPTextarea,
       // SPButtonGoogle,
       // SPBannerLogin,
-      SPFileUpload,
       SPSideBar,
       SPCardArchive,
       SPCardProfilSchool ,
