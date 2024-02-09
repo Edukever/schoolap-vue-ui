@@ -1,7 +1,7 @@
 <template>
     <div class="sp-modal-right">
         <div class="svg">
-            <img src="../../assets/img/icons/desktop.svg">
+            <img class="sp-modal-img" src="../../assets/img/icons/desktop.svg">
             <h2 class="welcome">{{ welcome }}</h2>
             <div class="successful-message">
                {{ sucessfully_message  }}</div>
