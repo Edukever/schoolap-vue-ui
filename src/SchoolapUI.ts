@@ -33,6 +33,7 @@ import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.
 import SPCardVideo from './components/cards/SPCardVideo.vue'
 import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
+import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 
 import './assets/scss/main.scss'
 
@@ -74,6 +75,7 @@ const SchoolapUI = {
     app.component('sp-card-video', SPCardVideo)
     app.component('sp-file-upload', SPFileUpload)
     app.component('sp-custom-select', SPCustomSelect)
+    app.component('sp-date-field-icon', SPDateFieldIcon)
   }
 }
 
