@@ -35,6 +35,7 @@ import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 import SPCardPreviewFile from './components/cards/SPCardPreviewFile.vue'
 import SPDataTableGrid from './components/tables/SPDataTableGrid.vue'
 import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
+import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
 import './assets/scss/main.scss'
 
@@ -78,6 +79,7 @@ const SchoolapUI = {
     app.component('sp-card-preview-file', SPCardPreviewFile)
     app.component('sp-data-table-grid', SPDataTableGrid)
     app.component('sp-custom-select', SPCustomSelect)
+    app.component('sp-date-field-icon', SPDateFieldIcon)
     app.component('sp-data-table', SPDataTable)
   }
 }
