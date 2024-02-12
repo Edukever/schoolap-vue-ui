@@ -126,3 +126,34 @@
         stroke: $color-noir;
     }
 }
+
+.sp-form-date {
+    
+    .sp-date {
+        color: $color-gris-2;
+        font-weight: 300;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+        display: block;
+        background: url('/src/assets/img/icons/calendar.svg') no-repeat;
+        width: 25px;
+        height: 25px;
+        font-weight: 300;
+        border-width: thin
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+    }
+    input::-webkit-datetime-edit-fields-wrapper {
+        position: relative;
+        left: 20px;
+    }
+    input::-webkit-datetime-edit {
+        position: relative;
+        left: 20px;
+    }
+}
