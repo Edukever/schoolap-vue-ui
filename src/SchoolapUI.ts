@@ -43,6 +43,11 @@ interface SchoolapUIPluginOptions {}
 
 const SchoolapUI = {
   install(app: App, options?: SchoolapUIPluginOptions) {
+
+    /**
+     * Components registration
+     * tags are kebab-case
+     */
     app.component('sp-button-primary', SPButtonPrimary)
     app.component('sp-button-google', SPButtonGoogle)
     app.component('sp-button-back', SPButtonBack)
@@ -81,6 +86,50 @@ const SchoolapUI = {
     app.component('sp-custom-select', SPCustomSelect)
     app.component('sp-date-field-icon', SPDateFieldIcon)
     app.component('sp-data-table', SPDataTable)
+
+
+    /**
+     * Components registration
+     * tags are pascal-case
+     */
+    app.component('SPButtonPrimary', SPButtonPrimary)
+    app.component('SPButtonGoogle', SPButtonGoogle)
+    app.component('SPButtonBack', SPButtonBack)
+    app.component('SPButtonIcon', SPButtonIcon)
+    app.component('SPBannerLogin', SPBannerLogin)
+    app.component('SPCheckBox', SPCheckbox)
+    app.component('SPRadio', SPRadio)
+    app.component('SPSearchBar', SPSearchBar)
+    app.component('SPTextarea', SPTextarea)
+    app.component('SPTextField', SPTextField)
+    app.component('SPTextField-icon', SPTextFieldIcon)
+    app.component('SPPasswordField', SPPasswordField)
+    app.component('SPModalRight', SPModalRight)
+    app.component('SPBannerWelcome', SPBannerWelcome)
+    app.component('SPSelect', SPSelect)
+    app.component('SPBreadTitle', SPBreadTitle)
+    app.component('SPBreadCrump', SPBreadCrump)
+    app.component('SPStat', SPStat)
+    app.component('SPCardActivity', SPCardActivity)
+    app.component('SPButtonIconArrowRight', SPButtonIconArrowRight)
+    app.component('SPSideBar', SPSideBar)
+    app.component('SPCardProfileSchool', SPCardProfilSchool)
+    app.component('SPCardPricing', SPCardPricing)
+    app.component('SPCardOtherAction', SPCardOtherAction)
+    app.component('SPCardRapportPresence', SPCardRapportPresence)
+    app.component('SPCardRapportPresenceTwo', SPCardRapportPresenceTwo)
+    app.component('SPCardPresence', SPCardPresence)
+    app.component('SPPagination', SPPagination)
+    app.component('SPCardNotification', SPCardNotification)
+    app.component('SPCardOption', SPCardOption)
+    app.component('SPCardArchive', SPCardArchive)
+    app.component('SPCardVideo', SPCardVideo)
+    app.component('SPFileUpload', SPFileUpload)
+    app.component('SPCardPreviewFile', SPCardPreviewFile)
+    app.component('SPDataTableGrid', SPDataTableGrid)
+    app.component('SPCustomSelect', SPCustomSelect)
+    app.component('SPDateFieldIcon', SPDateFieldIcon)
+    app.component('SPDataTable', SPDataTable)
   }
 }
 

@@ -41,7 +41,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import iconVector from '../../icons/iconVector.vue';
 import logoWhite from '../../icons/logoWhite.vue';
 import SPButtonToggleSideBar from '../../buttons/SPButtonSideBar.vue';
