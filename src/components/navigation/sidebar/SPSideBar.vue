@@ -95,7 +95,7 @@ export default {
   data() {
     return {
       isOpen: false,
-      isOpenSide: false,
+      isOpenSide: true,
     };
   },
 
