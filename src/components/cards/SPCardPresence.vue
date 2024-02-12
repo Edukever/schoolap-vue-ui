@@ -15,8 +15,8 @@
           :options="selectOptions"
           placeholder="Select a class"
           :value="selectedValue"
-          @input="handleSelectChangeUnique"
-          @change="handleSelectChange"
+          :defaultValue="defaultOption"
+          @change="handleSelectChangeUnique"
           withCircle="true"
         >
           <template v-slot:icon-option>
@@ -48,6 +48,14 @@ export default {
     SPCustomSelect
   },
   props: {
+    id: {
+      type: Number,
+      default: 0
+    },
+    attended: {
+      type: Boolean,
+      required: true
+    },
     name: {
       type: String,
       default: 'John Doe'
@@ -60,26 +68,32 @@ export default {
       type: String,
       default: ''
     },
-    handleSelectChange: {
-      type: Function,
-      default: () => {}
-    },
     img: {
       type: String,
       default: 'https://via.placeholder.com/150'
-    },
-    selectOptions: {
-        type: Array,
-        default: () => [
-            { title: 'Presence', status: 'green' },
-            { title: 'Absent', status: 'red' }
-        ]
     }
   },
 
+  mounted() {
+    console.log('default value ==> ', this.id, '<==', this.defaultOption)
+  },
+  computed: {
+    selectOptions() {
+      return [
+        { title: 'Present', status: 'green', id: 1 },
+        { title: 'Absent', status: 'red', id: 0 }
+      ]
+    },
+    defaultOption() {
+      if (this.attended) {
+        return this.selectOptions[0].id
+      }
+      return this.selectOptions[1].id
+    }
+  },
   methods: {
     handleSelectChangeUnique(value) {
-      this.$emit('change', value)
+      this.$emit('change', { id: this.id, attended: value.status === 'green' })
     }
   }
 }

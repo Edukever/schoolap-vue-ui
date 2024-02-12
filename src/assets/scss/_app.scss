@@ -10,27 +10,69 @@ img {
 
 .sp-core-container {
     display: flex;
+
     main {
         padding: 1.7vw 1.7vw;
         max-width: 94%;
         flex-wrap: wrap;
         width: 100%;
-        border: solid $color-vert 1px;
         overflow-x: hidden;
         overflow-y: scroll;
         height: 100vh;
     }
-  }
+}
+
+.sp-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: inherit;
+
+    .sp-col {
+        padding: 1.7vw 1.7vw;
+        flex: 1;
+    }
+
+    .sp-col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 1.1vw 1.7vw;
+    }
+
+    .sp-col-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: .5vw .5vw;
+    }
+
+    .sp-col-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: .5vw .5vw;
+    }
+
+    .sp-col-2{
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+        padding: .5vw .5vw;
+    
+    }
+}
 
 
 @media screen and (max-width: $breakpoint-mobile-xl) {
-    .sp-core-container{
+    .sp-core-container {
         flex-direction: row;
-        main{
+
+        main {
             transition: margin-left 0.5s;
         }
     }
 }
+
 @media screen and (min-width: $breakpoint-desktop-xxxl) {
-    
+    .sp-core-container {
+        main {
+            width: 100%;
+        }
+    }
 }
