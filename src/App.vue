@@ -297,12 +297,7 @@ export default {
         }
       ]
     }
-  },
-  methods: {
-    handleSelectChange(value) {
-      // console.log('moi', value)
-    }
-  }
+
 }
 </script>
 
