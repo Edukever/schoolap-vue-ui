@@ -3,14 +3,14 @@
     <SPSideBar />
     <main>
       <div class="container">
-        <SPDataTableGrid
+        <!-- <SPDataTableGrid
           :dataList="dataList"
           :columnClass="isFourColumns"
           perPage="9"
           itemsPerPage="9"
         >
-          <template v-slot="{ item }">
-            <!-- <SPCardPresence
+          <template v-slot="{ item }"> -->
+        <!-- <SPCardPresence
               :name="item.name"
               :item="item"
               :index="item.id"
@@ -19,10 +19,26 @@
               :id="item.id"
               :key="item.id"
             /> -->
-            <!-- <SPCardArchive :item="item" :titleFolder="item.name" :index="index" :key="item.id" /> -->
-            <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" />
+        <!-- <SPCardArchive :item="item" :titleFolder="item.name" :index="index" :key="item.id" /> -->
+        <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" />
           </template>
-        </SPDataTableGrid>
+        </SPDataTableGrid> -->
+
+        <SPDataTable :rows="dataList" :columns="columns" />
+
+        <div class="mt-4">
+          <p>Classe</p>
+          <SPDataTable :rows="classesRows" :columns="classes" isForClasse="true" />
+        </div>
+        <div class="mt-4">
+          <p>Finance</p>
+          <SPDataTable :rows="financesRows" :columns="finances" isForFinance="true" />
+        </div>
+
+        <div class="mt-5">
+          <p>Suivie Payement</p>
+          <SPDataTable :rows="suivieFinances" :columns="suivieFinance" :isForSuiviePayement="'true'" />
+        </div>
       </div>
     </main>
   </div>
@@ -52,6 +68,8 @@ import SPDataTableGrid from './components/datatable/SPDataTableGrid.vue'
 import SPCardPresence from './components/cards/SPCardPresence.vue'
 import SPCardRapportPresence from './components/cards/SPCardRapportPresence.vue'
 import SPCardRapportPresenceTwo from './components/cards/SPCardRapportPresenceTwo.vue'
+import SPDataTable from './components/datatable/SPDataTable.vue'
+import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 
 export default {
   components: {
@@ -68,6 +86,7 @@ export default {
     // SPTextarea,
     // SPButtonGoogle,
     // SPBannerLogin,
+    SPCustomSelect,
     SPSideBar,
     SPCardArchive,
     SPCardProfilSchool,
@@ -76,21 +95,206 @@ export default {
     SPDataTableGrid,
     SPCardPresence,
     SPCardRapportPresence,
-    SPCardRapportPresenceTwo
+    SPCardRapportPresenceTwo,
+    SPDataTable
   },
   data() {
     return {
       isFourColumns: 'sp-col-6',
+      selectOptions: [
+        { title: 'Present', status: 'green', id: 1 },
+        { title: 'Absent', status: 'red', id: 0 }
+      ],
+      columns: [
+        { label: 'Identité', field: 'identité' },
+        { label: 'Sexe', field: 'sexe' },
+        { label: 'Classe', field: 'clase' },
+        { label: 'Contact', field: 'contact' },
+        { label: 'Date de naissance', field: 'date' },
+        { label: 'Action', field: 'action' }
+      ],
+      classes: [
+        { label: '#', field: '#' },
+        { label: 'Nom', field: 'nom' },
+        { label: 'Cycle', field: 'cycle' },
+        { label: 'Effectif', field: 'effectif' },
+        { label: 'Enseignant', field: 'enseignant' },
+        { label: 'Action', field: 'action' }
+      ],
+      classesRows: [
+        { id: 1, name: '6ième Année', cycle: 'Secondaire', effectif: 34, teacher: 'Michael Doe' },
+        { id: 2, name: '5ième Année', cycle: 'Secondaire', effectif: 30, teacher: 'John Smith' },
+        { id: 3, name: '4ième Année', cycle: 'Primaire', effectif: 32, teacher: 'Jane Doe' },
+        { id: 4, name: '3ième Année', cycle: 'Secondaire', effectif: 33, teacher: 'Emily Johnson' },
+        { id: 5, name: '2ième Année', cycle: 'Secondaire', effectif: 31, teacher: 'Robert Brown' },
+        { id: 6, name: '1ière Année', cycle: 'Secondaire', effectif: 35, teacher: 'William Davis' }
+      ],
+
+      suivieFinance: [
+        { label: "Nom de l'etudiant", field: "nom de l'etudiant" },
+        { label: 'Classe', field: 'classe' },
+        { label: 'Nom de parent', field: 'nom de parent' },
+        { label: 'Contact', field: 'contact' },
+        { label: 'Type', field: 'type' },
+        { label: 'Status', field: 'status' },
+        { label: 'Action', field: 'action' }
+      ],
+      suivieFinances : [
+        { id: 1, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status:'pending' },
+        { id: 2, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status: 'collect' },
+        { id: 3, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status: 'late' },
+        { id: 4, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status: 'on-hold' }
+      ],
+
+      finances: [
+        { label: 'Date de paiement', field: 'date' },
+        { label: 'Personnes concernées', field: 'personnes' },
+        { label: 'Envoyé', field: 'envoyé' },
+        { label: 'Montant', field: 'montant' },
+        { label: 'Status', field: 'status' },
+        { label: 'Action', field: 'action' }
+      ],
+
+      financesRows: [
+        {
+          id: 1,
+          date: '2022-01-11',
+          personnes: 34,
+          envoyé: true,
+          montant: 100,
+          devise: '$',
+          status: true
+        },
+        {
+          id: 2,
+          date: '2022-01-11',
+          personnes: 30,
+          envoyé: true,
+          montant: 100,
+          devise: '$',
+          status: true
+        },
+        {
+          id: 3,
+          date: '2022-01-11',
+          personnes: 32,
+          envoyé: true,
+          montant: 100,
+          devise: '$',
+          status: true
+        },
+        {
+          id: 4,
+          date: '2022-01-11',
+          personnes: 33,
+          envoyé: false,
+          montant: 100,
+          devise: '$',
+          status: false
+        }
+      ],
+
       dataList: [
-        { id: 1, name: 'michael 1', attented: true },
-        { id: 2, name: 'michael 2', attented: false },
-        { id: 3, name: 'michael 3', attented: true },
-        { id: 4, name: 'michael 4', attented: false },
-        { id: 5, name: 'michael 5', attented: true },
-        { id: 6, name: 'michael 6', attented: true },
-        { id: 7, name: 'michael', attented: true },
-        { id: 8, name: 'michael', attented: true },
-        { id: 9, name: 'michael', attented: true }
+        {
+          id: 1,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 2,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          lastname: 'Michael',
+          gender: 'M',
+          classe: '6eme Scientifique',
+          contact: '+243 8256789723',
+          date: '2022-01-11',
+          avatar: 'https://randomuser.me/api/portraits/men/67.jpg'
+        }
       ]
     }
   },
