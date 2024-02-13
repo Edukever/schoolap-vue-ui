@@ -13,7 +13,7 @@
             <img class="sp-file-img" v-if="selectedImage" :src="selectedImage" />
             <div class="s-block">
                 <div class="sp-file-name">{{ fileName }}</div>
-                <img class="sp-file-loader" src="/src/assets/img/icons/file-loader.svg" />
+                <img class="sp-file-loader" src="../../../assets/img/icons/file-loader.svg" />
                 <div class="sp-file-size">{{ size }}</div>
             </div>
             <div @click="closeFile" class="sp-file-svg">
