@@ -33,7 +33,7 @@ import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.
 import SPCardVideo from './components/cards/SPCardVideo.vue'
 import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 import SPCardPreviewFile from './components/cards/SPCardPreviewFile.vue'
-import SPDataTableGrid from './components/tables/SPDataTableGrid.vue'
+import SPDataTableGrid from './components/datatable/SPDataTableGrid.vue'
 import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
