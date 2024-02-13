@@ -33,10 +33,11 @@ import SPButtonIconArrowRight from './components/buttons/SPButtonIconArrowRight.
 import SPCardVideo from './components/cards/SPCardVideo.vue'
 import SPFileUpload from './components/forms/inputs/SPFileUpload.vue'
 import SPCardPreviewFile from './components/cards/SPCardPreviewFile.vue'
-import SPDataTableGrid from './components/tables/SPDataTableGrid.vue'
+import SPDataTableGrid from './components/datatable/SPDataTableGrid.vue'
 import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
+import SPBreadCrumpAction from './components/breadcrump/SPBreadCrumpAction.vue'
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -86,8 +87,8 @@ const SchoolapUI = {
     app.component('sp-custom-select', SPCustomSelect)
     app.component('sp-date-field-icon', SPDateFieldIcon)
     app.component('sp-data-table', SPDataTable)
-
-
+    app.component('sp-bread-crump-action', SPBreadCrumpAction)
+  
     /**
      * Components registration
      * tags are pascal-case
@@ -130,6 +131,7 @@ const SchoolapUI = {
     app.component('SPCustomSelect', SPCustomSelect)
     app.component('SPDateFieldIcon', SPDateFieldIcon)
     app.component('SPDataTable', SPDataTable)
+    app.component('SPBreadCrumpAction', SPBreadCrumpAction)
   }
 }
 
