@@ -1,4 +1,4 @@
-<template>
+``<template>
   <div class="sp-custom-select">
     <i class="toggle icon-arrow-down" v-if="!selectedOption"></i>
     <i class="toggle icon-arrow-up" v-if="selectedOption"></i>

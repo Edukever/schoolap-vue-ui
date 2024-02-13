@@ -1,18 +1,19 @@
 .sp-card-option {
     display: none;
     position: absolute;
+    border: solid 1.7px #EFF3F4;
     border-radius: 10px;
     background: $white;
     max-width: 300px;
-    max-height: 90px;
+    max-height: 79px;
     overflow: hidden;
-    transition: all .3s;
+    transition: all display ease-in-out .3s;
     box-shadow: 3.6400320529937744px 0px 21.840194702148438px 0px #B9D4D080;
-    
+
     &.active {
         display: block;
     }
-    
+
     .sp-card-content-option {
         display: flex;
         flex-wrap: wrap;
@@ -37,6 +38,23 @@
             width: 33.3%;
         }
 
+        &.show {
+
+            .sp-edit,
+            .sp-archive {
+                flex: 0 0 auto;
+                width: 50%;
+            }
+
+            .sp-edit {
+                border-right: solid 1px #E5E5E5;
+            }
+
+            .sp-detail {
+                display: none;
+            }
+        }
+
         .sp-archive,
         .sp-edit,
         .sp-detail {
@@ -46,13 +64,15 @@
 
             p {
                 padding: 10px 0;
+                font-weight: 300;
+                font-size: 13px;
             }
 
             svg {
                 display: block;
                 margin: 0 auto;
-                width: 30px;
-                height: 30px;
+                width: 20px;
+                height: 20px;
             }
         }
     }
