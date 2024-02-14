@@ -38,6 +38,8 @@ import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
 import SPBreadCrumpAction from './components/breadcrump/SPBreadCrumpAction.vue'
+import SPCircleChart from './components/charts/SPCircleChart.vue'
+import SPLineProgress from './components/chart/SPLineProgress.vue'
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -87,6 +89,8 @@ const SchoolapUI = {
     app.component('sp-custom-select', SPCustomSelect)
     app.component('sp-date-field-icon', SPDateFieldIcon)
     app.component('sp-data-table', SPDataTable)
+    app.component('sp-circle-chart', SPCircleChart)
+    app.component('sp-line-progress', SPLineProgress)
     app.component('sp-bread-crump-action', SPBreadCrumpAction)
   
     /**

@@ -30,6 +30,8 @@ import SPCardOption from './src/components/cards/SPCardOption.vue';
 import SPCardArchive from './src/components/cards/SPCardArchive.vue';
 import SPCardPreviewFile from './src/components/cards/SPCardPreviewFile.vue';
 import SPDataTableGrid from './src/components/datatable/SPDataTableGrid.vue';
+import SPCircleChart from './src/components/chart/SPCircleChart.vue';
+import SPLineProgress from './src/components/chart/SPLineProgress.vue';
 
 
 export {
@@ -62,7 +64,9 @@ export {
     SPCardOption,
     SPCardArchive,
     SPCardPreviewFile,
-    SPDataTableGrid
+    SPDataTableGrid,
+    SPCircleChart,
+    SPLineProgress
 }
 import SchoolapUI from './src/SchoolapUI'
 
