@@ -22,19 +22,24 @@ export default {
       } else {
         return 0
       }
+    },
+    isAllZeroOrNull() {
+      return this.percentages.every(percentage => percentage === null || percentage === 0)
     }
   },
 
   methods: {
     calculateRingStyle(index) {
-      const startPercentage = this.calculateStartPercentage(index)
-      const strokeColor = this.calculateStrokeColor(index)
-      const strokeDasharray = `${100 - startPercentage} ${startPercentage}`
+      // if(index != 0){
+        const startPercentage = this.calculateStartPercentage(index)
+        const strokeColor = this.calculateStrokeColor(index)
+        const strokeDasharray = `${100 - startPercentage} ${startPercentage}`
 
-      return {
-        stroke: strokeColor,
-        strokeDasharray
-      }
+        return {
+          stroke: strokeColor,
+          strokeDasharray
+        }
+      // }
     },
 
     calculateStartPercentage(index) {
@@ -53,20 +58,22 @@ export default {
   <div class="sp-donut">
     <svg class="donut-chart" viewBox="0 0 42 42">
       <circle class="donut-chart__hole" cx="21" cy="21" r="15.91549430918954"></circle>
-      <circle
-        v-for="(percentage, index) in percentages"
-        :key="index"
-        class="donut-chart__ring"
-        cx="21"
-        cy="21"
-        r="15.91549430918954"
-        :style="calculateRingStyle(index)"
-      ></circle>
+      <template v-if="percentages.length > 0 && !isAllZeroOrNull">
+        <circle
+          v-for="(percentage, index) in percentages"
+          :key="index"
+          class="donut-chart__ring"
+          cx="21"
+          cy="21"
+          r="15.91549430918954"
+          :style="calculateRingStyle(index)"
+        ></circle>
+      </template>
     </svg>
 
     <div class="sp-description">
-        <h2>{{ total }}</h2>
-        <p>{{ description }}</p>
+      <h2>{{ total }}</h2>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>

@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-6">
-            <SPCardChart :percentages="chartData" :total="'100'" />
+            <SPCardChart :percentages="chartData" :total="'0'" />
           </div>
         </div>
         <div class="mb-5">
@@ -216,7 +216,7 @@ export default {
         { label: 'Status', field: 'status' },
         { label: 'Action', field: 'action' }
       ],
-      chartData: [35, 20, 28, 17],
+      chartData: [0, 0, 0, 0],
       financesRows: [
         {
           id: 1,
