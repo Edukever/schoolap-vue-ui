@@ -25,26 +25,26 @@ $white: #ffffff !default;
 $black: #000000 !default;
 $blue-variant-link: #41A3DF !default;
 
-$colors:(
-  "red":        $color-red,
-  "red-light":  $color-red-light,
-  "noir":       $color-noir,
-  "gris-3":     $color-gris-3,
-  "gris-2":     $color-gris-2,
-  "gris-1":     $color-gris-1,
+$colors: (
+  "red": $color-red,
+  "red-light": $color-red-light,
+  "noir": $color-noir,
+  "gris-3": $color-gris-3,
+  "gris-2": $color-gris-2,
+  "gris-1": $color-gris-1,
   "gris-light": $color-gris-light,
-  "blanc":      $color-blanc,
-  "vert":       $color-vert,
+  "blanc": $color-blanc,
+  "vert": $color-vert,
   "vert-light": $color-vert-light,
-  "bleu":       $color-bleu,
-  "bleu-1":     $color-bleu-1,
+  "bleu": $color-bleu,
+  "bleu-1": $color-bleu-1,
   "bleu-light": $color-bleu-light,
-  "jaue":       $color-jaune,
+  "jaue": $color-jaune,
   "jaune-light": $color-jaune-light,
-  "orange":      $color-orange,
-  "orange-1":    $color-orange-1,
+  "orange": $color-orange,
+  "orange-1": $color-orange-1,
   "orange-light": $color-orange-light,
-)!default;
+  ) !default;
 
 
 // Buttons sizes
@@ -59,12 +59,12 @@ $button-sizes: (
   "lg": $lg,
   "md": $md,
   "default": $default,
-  "sm": $sm
-)!default;
+  "sm": $sm) !default;
 
 // Linear gradient
-$gradient-blue: linear-gradient(360deg, #3F97E3 0%, #43B5D7 100%);
-$sidebar-gradient:  linear-gradient(0deg, #3F97E3 0%, #43B5D7 100%);
+$gradient-blue: linear-gradient(360deg, #3F97E3 0%, #43B5D7 100%
+);
+$sidebar-gradient: linear-gradient(0deg, #3F97E3 0%, #43B5D7 100%);
 
 
 // Typograghy
@@ -74,50 +74,42 @@ $line-height-base: 1.6;
 
 
 /***** Font weight *****/
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-medium:          500 !default;
-$font-weight-medium-xl:       600 !default;
-$font-weight-bold:            700 !default;
-$font-weight-medium-bold :    800 !default;
-$font-weight-bolder:          bolder !default;
-$font-weight-base:            $font-weight-normal !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-medium-xl: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-medium-bold : 800 !default;
+$font-weight-bolder: bolder !default;
+$font-weight-base: $font-weight-normal !default;
 
-$font-weights:(
-    "lighter" : $font-weight-lighter,
-    "light": $font-weight-light,
-    "normal" :$font-weight-normal,
-    "medium" : $font-weight-medium,
-    "medium-xl" : $font-weight-medium-xl,
-    "bold" :$font-weight-bold,
-    "bolder" :$font-weight-bolder,
-    "bolder-title" : $font-weight-medium-bold
-)!default;
+$font-weights: (
+  "lighter" : $font-weight-lighter,
+  "light": $font-weight-light,
+  "normal" :$font-weight-normal,
+  "medium" : $font-weight-medium,
+  "medium-xl" : $font-weight-medium-xl,
+  "bold" :$font-weight-bold,
+  "bolder" :$font-weight-bolder,
+  "bolder-title" : $font-weight-medium-bold) !default;
 
 
 /***** Button *****/
-$enable-button-pointers:      true !default;
-$btn-padding-y :              .375rem !default;
-$btn-padding-x :               1.5rem !default;
-$link-hover-decoration:        null !default;
+$enable-button-pointers: true !default;
+$btn-padding-y : .375rem !default;
+$btn-padding-x : 1.5rem !default;
+$link-hover-decoration: null !default;
 
 /**** Breakpoints responsive ****/
-  $breakpoint-mobile: 480px;
-  $breakpoint-mobile-xl: 600px;
-  $breakpoint-tablet: 768px;
-  $breakpoint-tablet-xl: 992px;
-  $breakpoint-desktop: 1024px;
-  $breakpoint-desktop-xl: 1200px;
-  $breakpoint-desktop-xl-1: 1300px;
-  $breakpoint-desktop-xxl: 1400px;
-  $breakpoint-desktop-xxl-1: 1500px;
-  $breakpoint-desktop-xxxl: 1600px;
-  $breakpoint-desktop-xxxl-1: 1640px;
-
-
-
-
-
-
-  
+$breakpoint-mobile: 480px;
+$breakpoint-mobile-xl: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-xl: 992px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-xl: 1200px;
+$breakpoint-desktop-xl-1: 1300px;
+$breakpoint-desktop-xxl: 1400px;
+$breakpoint-desktop-xxl-1: 1500px;
+$breakpoint-desktop-xxxl: 1600px;
+$breakpoint-desktop-xxxl-1: 1640px;

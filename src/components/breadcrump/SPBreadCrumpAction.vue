@@ -2,15 +2,15 @@
 <template>
     <div class="sp-bread-title"> 
         <h4 class="sp-title-bleu text-dark">
-            <router :to="{ name: firstRoute.name }">
+            <router-link class="sp-left-link" :to="{ name: firstRoute.route }">
                 {{ firstRoute.title }}
-            </router>
+            </router-link>
         </h4>
         <img class="sp-img" height="20" src="../../assets/img/icons/arrow_left.svg">
         <h4 class="sp-title-bleu">
-            <router :to="{ name: secondeRoute.name }">
+            <router-link class="sp-right-link" :to="{ name: secondeRoute.route }">
                 {{ secondeRoute.title }}
-            </router>
+            </router-link>
         </h4>
     </div>
 </template>
