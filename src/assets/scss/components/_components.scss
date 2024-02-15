@@ -24,6 +24,7 @@
 @import "cards/card_archive";
 @import "cards/card_video";
 @import "cards/card_preview_file";
+@import "cards/card_stat_chart";
 
 // Forms
 @import "forms/text-field";
@@ -32,6 +33,9 @@
 @import 'forms/custom_select';
 @import 'forms/upload_file';
 
+//chart
+@import 'chart/donut-chart';
+@import 'chart/line-progress';
 //table
 @import 'table/dataTable';
 

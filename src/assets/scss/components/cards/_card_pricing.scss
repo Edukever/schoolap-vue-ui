@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-.sp-card-pricing{
+.sp-card-pricing {
     flex-shrink: 0;
     display: block;
     padding: 10px 10px;
@@ -8,57 +8,63 @@
     border-radius: 10px;
     background-image: linear-gradient(10deg, #F68C2C 15%, #FFD954 100%);
 
-    .sp-card-pricing-head{
+    .sp-card-pricing-head {
         max-width: 152px;
         padding: 10px 20px;
-        h2{
+
+        h2 {
             font-size: 30px;
             font-weight: 400;
         }
     }
 
-    .sp-card-pricing-body{
+    .sp-card-pricing-body {
         display: block;
         margin: 0 auto;
         text-align: center;
         padding: 10px 20px;
         position: relative;
 
-        .sp-progress-circle{
+        .sp-progress-circle {
             display: block;
-            margin-bottom:0rem;
+            margin-bottom: 0rem;
 
-            svg{
-                width:195px;
-                height:195px;
+            svg {
+                width: 195px;
+                height: 195px;
             }
-            .sp-progress-circle-content{
+
+            .sp-progress-circle-content {
                 position: absolute;
                 top: 25%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 30px;
                 font-weight: 400;
-                .sp-courone{
+
+                .sp-courone {
                     width: 50px;
                     height: 50px;
                 }
-                .sp-price{
+
+                .sp-price {
                     font-size: 3.4rem;
                     font-weight: 700;
                     line-height: 1.0;
                     margin-bottom: 0;
                 }
-                .sp-progress-circle-content-icon{
+
+                .sp-progress-circle-content-icon {
                     font-size: 13px;
                     font-weight: 400;
                 }
             }
         }
 
-        .sp-badget-pricing{
+        .sp-badget-pricing {
             margin-top: 1rem;
-            .sp-badget-p{
+
+            .sp-badget-p {
                 border: solid $white 2px;
                 border-radius: 7px;
                 display: block;
@@ -70,35 +76,39 @@
             }
         }
 
-        .sp-pricing-body-item{
+        .sp-pricing-body-item {
             margin-top: 1.5rem;
-            display:flex ;
+            display: flex;
             justify-content: center;
             align-items: self-start;
             height: 100%;
-            .sp-svg{
+
+            .sp-svg {
                 width: 15%;
                 height: 100%;
 
-                svg{
+                svg {
                     width: 100%;
                     height: 100%;
                 }
             }
-            .sp-description{
+
+            .sp-description {
                 width: auto;
                 height: 100%;
                 padding: 0;
                 align-items: self-start;
                 text-align: left;
                 margin-left: .45rem;
-                .sp-title{
+
+                .sp-title {
                     font-size: 2.0rem;
                     font-weight: 700;
                     margin-bottom: 0;
                     line-height: 1.0;
                 }
-                .sp-text{
+
+                .sp-text {
                     font-size: .7rem;
                     font-weight: 400;
                     margin-bottom: 0;
@@ -107,12 +117,12 @@
         }
     }
 
-    .sp-footer{
+    .sp-footer {
         display: block;
         text-align: center;
         margin: 25px 0;
 
-        .sp-btn-white{
+        .sp-btn-white {
             border: solid $white 1px;
             border-radius: 7px;
             padding: 10px 30px;
@@ -126,47 +136,46 @@
 
 $pi: 3.14159265358979;
 $circular-progress-size: 250px;
-$circular-progress-half-size: $circular-progress-size / 2;
+$circular-progress-half-size: calc($circular-progress-size / 2);
 $circular-progress-stroke-width: 10px;
-$circular-progress-radius: ($circular-progress-size - $circular-progress-stroke-width) / 2;
+$circular-progress-radius: calc(($circular-progress-size - $circular-progress-stroke-width) / 2);
 $circular-progress-circumference: $circular-progress-radius * $pi * 2;
 
-    .circular-progress {
-        --size: #{$circular-progress-size};
-        --half-size: #{$circular-progress-half-size};
-        --stroke-width: #{$circular-progress-stroke-width};
-        --radius: #{$circular-progress-radius};
-        --circumference: #{$circular-progress-circumference};
-        --dash: calc((var(--progress) * var(--circumference)) / 100);
-        // animation: progress-animation 5s linear 0s 1 forwards;
+.circular-progress {
+    --size: #{$circular-progress-size};
+    --half-size: #{$circular-progress-half-size};
+    --stroke-width: #{$circular-progress-stroke-width};
+    --radius: #{$circular-progress-radius};
+    --circumference: #{$circular-progress-circumference};
+    --dash: calc((var(--progress) * var(--circumference)) / 100);
+    // animation: progress-animation 5s linear 0s 1 forwards;
 
-        circle {
-            cx: var(--half-size);
-            cy: var(--half-size);
-            r: var(--radius);
-            stroke-width: var(--stroke-width);
-            fill: none;
-            stroke-linecap: round;
-        }
-
-        circle.bg {
-            stroke: #FDDCAD;
-        }
-
-        circle.fg {
-            transform: rotate(-90deg);
-            transform-origin: var(--half-size) var(--half-size);
-            stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
-            transition: stroke-dasharray 0.3s linear 0s;
-            stroke: $white;
-        }
+    circle {
+        cx: var(--half-size);
+        cy: var(--half-size);
+        r: var(--radius);
+        stroke-width: var(--stroke-width);
+        fill: none;
+        stroke-linecap: round;
     }
 
-    @function calc-progress($value) {
-        @return calc((#{$value} * var(--circumference)) / 100);
+    circle.bg {
+        stroke: #FDDCAD;
     }
 
-    [data-progress] {
-        --progress: attr(data-progress);
+    circle.fg {
+        transform: rotate(-90deg);
+        transform-origin: var(--half-size) var(--half-size);
+        stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+        transition: stroke-dasharray 0.3s linear 0s;
+        stroke: $white;
     }
+}
 
+@function calc-progress($value) {
+    @return calc((#{$value} * var(--circumference)) / 100);
+}
+
+[data-progress] {
+    --progress: attr(data-progress);
+}
