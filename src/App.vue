@@ -3,7 +3,11 @@
     <SPSideBar />
     <main>
       <div class="container">
-        <div class="mb-4"></div>
+        <div class="row mb-4">
+          <div class="col-6">
+            <SPCardChart :percentages="chartData" :total="'100'" />
+          </div>
+        </div>
         <div class="mb-5">
           <div class="row">
             <div class="col-3">
@@ -92,6 +96,7 @@ import SPDataTable from './components/datatable/SPDataTable.vue'
 import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPCircleChart from './components/chart/SPCircleChart.vue'
 import SPLineProgress from './components/chart/SPLineProgress.vue'
+import SPCardChart from './components/cards/SPCardChart.vue'
 
 export default {
   components: {
@@ -120,7 +125,8 @@ export default {
     SPCardRapportPresenceTwo,
     SPDataTable,
     SPCircleChart,
-    SPLineProgress
+    SPLineProgress,
+    SPCardChart
   },
   data() {
     return {
