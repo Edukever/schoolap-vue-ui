@@ -15,7 +15,6 @@
                     <ellipse cx="2.90919" cy="10.3197" rx="2.43498" ry="2.38182" transform="rotate(90 2.90919 10.3197)" fill="#292D32"/>
                     <ellipse cx="2.90919" cy="17.6254" rx="2.43498" ry="2.38182" transform="rotate(90 2.90919 17.6254)" fill="#292D32"/>
                 </svg>
-
             </div>
         </div>
         <div class="sp-detail">
@@ -70,9 +69,9 @@ export default {
         }
     },
     mounted() {
-        document.body.addEventListener('click', () => {
-            this.show = null;
-        });
-    },
+        // document.body.addEventListener('click', () => {
+        //     this.indexValue == null
+        // })
+    }
 }
 </script>

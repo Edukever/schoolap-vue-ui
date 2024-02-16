@@ -369,7 +369,7 @@ export default {
   },
   mounted() {
     document.body.addEventListener('click', () => {
-      this.archiveKey = null
+      // this.activeIndex = null
     })
   },
   methods: {
@@ -379,9 +379,7 @@ export default {
     handleToggle(index) {
       if (this.activeIndex !== null && this.activeIndex !== index) {
         this.dataList[this.activeIndex].active = false;
-        console.log('moi', this.dataList[this.activeIndex].active)
       }
-
       this.dataList[index].active = true;
       this.activeIndex = index;
     }
