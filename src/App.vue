@@ -3,14 +3,34 @@
     <SPSideBar />
     <main>
       <div class="container">
-        <!-- <SPDataTableGrid
+        <div class="row mb-4">
+          <div class="col-6">
+            <SPCardChart :percentages="chartData" :total="'0'" />
+          </div>
+        </div>
+        <div class="mb-5">
+          <div class="row">
+            <div class="col-3">
+              <SPCircleChart :percentages="chartData" :total="'434 000'" />
+            </div>
+            <div class="col-9">
+              <SPLineProgress :percentage="'50'" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-5">
+          <div class="col-3">
+            <SPCircleChart :percentages="chartData" :total="'434 000'" />
+          </div>
+        </div>
+        <SPDataTableGrid
           :dataList="dataList"
           :columnClass="isFourColumns"
           perPage="9"
           itemsPerPage="9"
         >
-          <template v-slot="{ item }"> -->
-        <!-- <SPCardPresence
+          <template v-slot="{ item }">
+            <!-- <SPCardPresence
               :name="item.name"
               :item="item"
               :index="item.id"
@@ -19,10 +39,10 @@
               :id="item.id"
               :key="item.id"
             /> -->
-        <!-- <SPCardArchive :item="item" :titleFolder="item.name" :index="index" :key="item.id" /> -->
-        <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" />
+            <SPCardArchive />
+            <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" /> -->
           </template>
-        </SPDataTableGrid> -->
+        </SPDataTableGrid>
 
         <SPDataTable :rows="dataList" :columns="columns" />
 
@@ -37,7 +57,11 @@
 
         <div class="mt-5">
           <p>Suivie Payement</p>
-          <SPDataTable :rows="suivieFinances" :columns="suivieFinance" :isForSuiviePayement="'true'" />
+          <SPDataTable
+            :rows="suivieFinances"
+            :columns="suivieFinance"
+            :isForSuiviePayement="'true'"
+          />
         </div>
       </div>
     </main>
@@ -70,6 +94,9 @@ import SPCardRapportPresence from './components/cards/SPCardRapportPresence.vue'
 import SPCardRapportPresenceTwo from './components/cards/SPCardRapportPresenceTwo.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
 import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
+import SPCircleChart from './components/chart/SPCircleChart.vue'
+import SPLineProgress from './components/chart/SPLineProgress.vue'
+import SPCardChart from './components/cards/SPCardChart.vue'
 
 export default {
   components: {
@@ -96,11 +123,14 @@ export default {
     SPCardPresence,
     SPCardRapportPresence,
     SPCardRapportPresenceTwo,
-    SPDataTable
+    SPDataTable,
+    SPCircleChart,
+    SPLineProgress,
+    SPCardChart
   },
   data() {
     return {
-      isFourColumns: 'sp-col-6',
+      isFourColumns: 'sp-col-2',
       selectOptions: [
         { title: 'Present', status: 'green', id: 1 },
         { title: 'Absent', status: 'red', id: 0 }
@@ -139,11 +169,43 @@ export default {
         { label: 'Status', field: 'status' },
         { label: 'Action', field: 'action' }
       ],
-      suivieFinances : [
-        { id: 1, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status:'pending' },
-        { id: 2, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status: 'collect' },
-        { id: 3, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status: 'late' },
-        { id: 4, name: 'Mogolo', classe: '6eme Scientifique', parent: 'Mogolo', contact: '+243 8256789723', type: 'Paiement', status: 'on-hold' }
+      suivieFinances: [
+        {
+          id: 1,
+          name: 'Mogolo',
+          classe: '6eme Scientifique',
+          parent: 'Mogolo',
+          contact: '+243 8256789723',
+          type: 'Paiement',
+          status: 'pending'
+        },
+        {
+          id: 2,
+          name: 'Mogolo',
+          classe: '6eme Scientifique',
+          parent: 'Mogolo',
+          contact: '+243 8256789723',
+          type: 'Paiement',
+          status: 'collect'
+        },
+        {
+          id: 3,
+          name: 'Mogolo',
+          classe: '6eme Scientifique',
+          parent: 'Mogolo',
+          contact: '+243 8256789723',
+          type: 'Paiement',
+          status: 'late'
+        },
+        {
+          id: 4,
+          name: 'Mogolo',
+          classe: '6eme Scientifique',
+          parent: 'Mogolo',
+          contact: '+243 8256789723',
+          type: 'Paiement',
+          status: 'on-hold'
+        }
       ],
 
       finances: [
@@ -154,7 +216,7 @@ export default {
         { label: 'Status', field: 'status' },
         { label: 'Action', field: 'action' }
       ],
-
+      chartData: [0, 0, 0, 0],
       financesRows: [
         {
           id: 1,
