@@ -38,6 +38,8 @@ import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
 import SPBreadCrumpAction from './components/breadcrump/SPBreadCrumpAction.vue'
+import SPRightSideModal from './components/modal/SPRightSideModal.vue'
+
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -88,7 +90,7 @@ const SchoolapUI = {
     app.component('sp-date-field-icon', SPDateFieldIcon)
     app.component('sp-data-table', SPDataTable)
     app.component('sp-bread-crump-action', SPBreadCrumpAction)
-  
+    app.component('sp-right-side-modal', SPRightSideModal)
     /**
      * Components registration
      * tags are pascal-case
@@ -132,6 +134,7 @@ const SchoolapUI = {
     app.component('SPDateFieldIcon', SPDateFieldIcon)
     app.component('SPDataTable', SPDataTable)
     app.component('SPBreadCrumpAction', SPBreadCrumpAction)
+    app.component('SPRightSideModal', SPRightSideModal)
   }
 }
 

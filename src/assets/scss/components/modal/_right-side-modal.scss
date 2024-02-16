@@ -1,0 +1,44 @@
+.sp-right-side-modal {
+    background: var(--blanc, #FFF);
+    border-radius: 45px 0px 0px 45px;
+    height: 740px;
+    width: 410px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999999;
+ 
+    .sp-header-modal {
+        padding: 30px;
+        margin-top: 5px;
+
+        .sp-close-modal {
+            cursor: pointer;
+
+            svg path {
+                stroke: $color-noir;
+                // fill: $color-noir;
+            }
+        }
+    }
+    
+    .sp-content-modal {
+        margin-left: 80px;
+        margin-top: 40px;
+    }
+}
+
+.sp-closed-modal {
+    -webkit-transition: all 0.2s ease-in-out; 
+    transition: all 0.3s;
+    display: none;
+
+    
+
+    // .sp-floating-component {
+    //     display: block;
+    //     padding: 20px;
+    //     background-color: #fff;
+    // }
+}
