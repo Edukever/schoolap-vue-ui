@@ -38,6 +38,7 @@ import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPDateFieldIcon from './components/forms/inputs/SPDateFieldIcon.vue'
 import SPDataTable from './components/datatable/SPDataTable.vue'
 import SPBreadCrumpAction from './components/breadcrump/SPBreadCrumpAction.vue'
+import SPRightSideModal from './components/modal/SPRightSideModal.vue'
 import SPCircleChart from './components/charts/SPCircleChart.vue'
 import SPLineProgress from './components/chart/SPLineProgress.vue'
 import SPCardChart from './components/cards/SPCardChart.vue'
@@ -94,7 +95,7 @@ const SchoolapUI = {
     app.component('sp-line-progress', SPLineProgress)
     app.component('sp-card-chart', SPCardChart)
     app.component('sp-bread-crump-action', SPBreadCrumpAction)
-  
+    app.component('sp-right-side-modal', SPRightSideModal)
     /**
      * Components registration
      * tags are pascal-case
@@ -138,6 +139,7 @@ const SchoolapUI = {
     app.component('SPDateFieldIcon', SPDateFieldIcon)
     app.component('SPDataTable', SPDataTable)
     app.component('SPBreadCrumpAction', SPBreadCrumpAction)
+    app.component('SPRightSideModal', SPRightSideModal)
   }
 }
 
