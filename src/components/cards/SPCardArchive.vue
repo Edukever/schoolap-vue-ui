@@ -23,7 +23,7 @@
             <h4 class="sp-title">{{ titleFolder }}</h4>
         </div>
         <SPCardOption 
-            :class="{'active': show}" 
+            :class="{ 'active': indexValue }"
             @edit-clicked="handleEditClick"
             @detail-clicked="handleDetailClick"
             @archive-clicked="handleArchiveClick"
@@ -50,11 +50,9 @@ export default {
             type: String,
             default: '1 documents'
         },
-        
-    },
-    data(){
-        return{
-            show: false
+        indexValue: {
+            type: Number,
+            required: true
         }
     },
     methods: {
@@ -67,14 +65,13 @@ export default {
         handleArchiveClick() {
             this.$emit('archive');
         },
-        toggleShow(event){
-            event.stopPropagation();
-            this.show = !this.show;
+        toggleShow(){
+            this.$emit('toggle', this.indexValue);
         }
     },
     mounted() {
         document.body.addEventListener('click', () => {
-            this.show = false;
+            this.show = null;
         });
     },
 }

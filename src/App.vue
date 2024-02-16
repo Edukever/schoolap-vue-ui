@@ -29,7 +29,7 @@
           perPage="9"
           itemsPerPage="9"
         >
-          <template v-slot="{ item }">
+          <template v-slot="{ item, index }">
             <!-- <SPCardPresence
               :name="item.name"
               :item="item"
@@ -39,7 +39,13 @@
               :id="item.id"
               :key="item.id"
             /> -->
-            <SPCardArchive />
+            <SPCardArchive
+              :titleFolder="item.name"
+              :subtitle="item.lastname"
+              :index="index"
+              @toggle="handleToggle(index)"
+              :indexValue="activeIndex === index"
+            />
             <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" /> -->
           </template>
         </SPDataTableGrid>
@@ -131,6 +137,7 @@ export default {
   data() {
     return {
       isFourColumns: 'sp-col-2',
+      activeIndex : null,
       selectOptions: [
         { title: 'Present', status: 'green', id: 1 },
         { title: 'Absent', status: 'red', id: 0 }
@@ -360,9 +367,23 @@ export default {
       ]
     }
   },
+  mounted() {
+    document.body.addEventListener('click', () => {
+      this.archiveKey = null
+    })
+  },
   methods: {
     handleSelectChange(value) {
       // console.log('moi', value)
+    },
+    handleToggle(index) {
+      if (this.activeIndex !== null && this.activeIndex !== index) {
+        this.dataList[this.activeIndex].active = false;
+        console.log('moi', this.dataList[this.activeIndex].active)
+      }
+
+      this.dataList[index].active = true;
+      this.activeIndex = index;
     }
   }
 }
