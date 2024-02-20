@@ -42,6 +42,7 @@ import SPCircleChart from './components/charts/SPCircleChart.vue'
 import SPLineProgress from './components/chart/SPLineProgress.vue'
 import SPCardChart from './components/cards/SPCardChart.vue'
 import SPMiniDataTable from './components/datatable/SPMiniDataTable.vue'
+import SPBullChat from './components/chat/SPBullChat.vue'
 import './assets/scss/main.scss'
 
 interface SchoolapUIPluginOptions {}
@@ -92,6 +93,7 @@ const SchoolapUI = {
     app.component('sp-date-field-icon', SPDateFieldIcon)
     app.component('sp-data-table', SPDataTable)
     app.component('sp-mini-data-table', SPMiniDataTable)
+    app.component('sp-bull-chat', SPBullChat)
     app.component('sp-circle-chart', SPCircleChart)
     app.component('sp-line-progress', SPLineProgress)
     app.component('sp-card-chart', SPCardChart)
