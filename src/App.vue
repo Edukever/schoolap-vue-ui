@@ -4,6 +4,12 @@
     <main>
       <div class="container">
         <div class="row">
+          <div class="col-7"></div>
+          <div class="col-5">
+            <SPBullChat />
+          </div>
+        </div>
+        <div class="row">
           <div class="col-5">
             <SPMiniDataTable :columns="miniDataTable" :rows="miniRows" />
           </div>
@@ -109,6 +115,7 @@ import SPCircleChart from './components/chart/SPCircleChart.vue'
 import SPLineProgress from './components/chart/SPLineProgress.vue'
 import SPCardChart from './components/cards/SPCardChart.vue'
 import SPMiniDataTable from './components/datatable/SPMiniDataTable.vue'
+import SPBullChat from './components/chat/SPBullChat.vue'
 
 export default {
   components: {
@@ -139,7 +146,8 @@ export default {
     SPCircleChart,
     SPLineProgress,
     SPCardChart,
-    SPMiniDataTable
+    SPMiniDataTable,
+    SPBullChat
   },
   data() {
     return {
@@ -432,7 +440,10 @@ export default {
       }
       this.dataList[index].active = true
       this.activeIndex = index
-    }
+    },
+    handleEditClick() {
+      console.log('edit')
+    },
   }
 }
 </script>
