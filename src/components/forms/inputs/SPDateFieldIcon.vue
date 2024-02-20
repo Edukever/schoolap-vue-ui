@@ -1,6 +1,6 @@
 <template>
     <div class="sp-form-date">
-        <input ref="dateInput" class="sp-input-field sp-date sp-form-control" type="date">
+        <input class="sp-input-field sp-date sp-form-control" @input="onInput" type="date">
     </div>
 </template>
 
@@ -19,7 +19,9 @@ export default {
     },
 
     methods: {
-
+        onInput(event) {
+          this.$emit('textField', event.target.value)
+        }
     },
 
 }
