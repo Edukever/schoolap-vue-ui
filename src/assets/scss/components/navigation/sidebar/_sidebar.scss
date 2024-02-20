@@ -2,8 +2,8 @@
     overflow-x: hidden;
     border-radius: 0px 30px 30px 0px;
     width: 25%;
-    box-shadow: 0px 4px 30px 10px rgba(66, 167, 198, 0.50);
-    transition: width 0.5s ease-in-out;
+    // box-shadow: 0px 4px 30px 10px rgba(66, 167, 198, 0.50);
+    transition: width 0.3s ease-in-out;
 
     .sp-vector {
         position: absolute;
@@ -22,7 +22,7 @@
         aside {
             .sp-sidebar-header {
                 display: block;
-                margin: 0 30px;
+                margin: 0;
                 padding: 20px 0;
 
                 .logo-white,
@@ -38,7 +38,8 @@
                     svg {
                         width: 30px;
                         height: 30px;
-                        cursor: pointer !important;
+                        display: block;
+                        margin: 0 auto;
                     }
                 }
             }
@@ -66,12 +67,23 @@
                 padding-left: 22px;
 
                 li {
-                    padding: 0;
+                    a {
+                        padding: 5px;
 
-                    svg:first-child {
-                        width: 25px;
-                        height: 25px;
-                        margin-right: 1.6rem;
+                        svg {
+                            width: 25px;
+                            height: 25px;
+                            margin-right: 1.6rem;
+                        }
+
+                        .sp-svg-right {
+                            display: none;
+
+                            path {
+                                fill: $body-bg-white;
+                                stroke: $blue-variant-link;
+                            }
+                        }
                     }
                 }
             }
@@ -144,7 +156,6 @@
 
                         .sp-color {
                             fill: $white;
-
                         }
                     }
 
@@ -161,6 +172,25 @@
                         i {
                             margin-right: 5px;
                         }
+
+                        svg {
+                            fill: $blue-variant-link;
+
+                            path {
+                                fill: $blue-variant-link;
+
+                            }
+                        }
+
+                        .sp-svg-right {
+                            color: none !important;
+                            fill: $body-bg-white;
+
+                            path {
+                                fill: $body-bg-white;
+                                stroke: $blue-variant-link;
+                            }
+                        }
                     }
                 }
 
@@ -168,26 +198,18 @@
                     display: flex;
                     align-items: center;
 
-                    .sp-link-name {
-                        width: 69%;
-                    }
-
-                    .sp-svg-right {
-                        &:hover {
-                            path {
-                                fill: $color-bleu;
-                            }
+                    a {
+                        .sp-link-name {
+                            width: 69%;
                         }
+
                     }
                 }
 
                 &.isToggle>.sp-icon-link {
                     .sp-svg-right {
                         transform: rotate(-180deg);
-
-                        path {
-                            fill: $color-bleu;
-                        }
+                        transition: all ease-in-out 0.3s;
                     }
                 }
 
@@ -197,13 +219,14 @@
                     padding: 6px 6px 14px 80px;
                     margin-top: -10px;
                     overflow: hidden;
+                    transition: all ease-in-out display 0.3s;
                 }
 
                 .sp-sub-menu.isToggle {
                     display: block;
                     height: auto;
-                }
 
+                }
 
             }
         }

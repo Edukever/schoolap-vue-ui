@@ -15,7 +15,6 @@
                     <ellipse cx="2.90919" cy="10.3197" rx="2.43498" ry="2.38182" transform="rotate(90 2.90919 10.3197)" fill="#292D32"/>
                     <ellipse cx="2.90919" cy="17.6254" rx="2.43498" ry="2.38182" transform="rotate(90 2.90919 17.6254)" fill="#292D32"/>
                 </svg>
-
             </div>
         </div>
         <div class="sp-detail">
@@ -23,7 +22,7 @@
             <h4 class="sp-title">{{ titleFolder }}</h4>
         </div>
         <SPCardOption 
-            :class="{'active': show}" 
+            :class="{ 'active': indexValue }"
             @edit-clicked="handleEditClick"
             @detail-clicked="handleDetailClick"
             @archive-clicked="handleArchiveClick"
@@ -50,11 +49,9 @@ export default {
             type: String,
             default: '1 documents'
         },
-        
-    },
-    data(){
-        return{
-            show: false
+        indexValue: {
+            type: Number,
+            required: true
         }
     },
     methods: {
@@ -67,15 +64,14 @@ export default {
         handleArchiveClick() {
             this.$emit('archive');
         },
-        toggleShow(event){
-            event.stopPropagation();
-            this.show = !this.show;
+        toggleShow(){
+            this.$emit('toggle', this.indexValue);
         }
     },
     mounted() {
-        document.body.addEventListener('click', () => {
-            this.show = false;
-        });
-    },
+        // document.body.addEventListener('click', () => {
+        //     this.indexValue == null
+        // })
+    }
 }
 </script>
