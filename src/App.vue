@@ -3,9 +3,14 @@
     <SPSideBar />
     <main>
       <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <SPMiniDataTable :columns="miniDataTable" :rows="miniRows" />
+          </div>
+        </div>
         <div class="row mb-4">
           <div class="col-6">
-            <SPCardChart :percentages="chartData" :total="'0'" />
+            <SPCardChart :percentages="chartData" :total="'100'" />
           </div>
         </div>
         <div class="mb-5">
@@ -29,7 +34,7 @@
           perPage="9"
           itemsPerPage="9"
         >
-          <template v-slot="{ item }">
+          <template v-slot="{ item, index }">
             <!-- <SPCardPresence
               :name="item.name"
               :item="item"
@@ -39,7 +44,13 @@
               :id="item.id"
               :key="item.id"
             /> -->
-            <SPCardArchive />
+            <SPCardArchive
+              :titleFolder="item.name"
+              :subtitle="item.lastname"
+              :index="index"
+              @toggle="handleToggle(index)"
+              :indexValue="activeIndex === index"
+            />
             <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" /> -->
           </template>
         </SPDataTableGrid>
@@ -97,6 +108,7 @@ import SPCustomSelect from './components/forms/select/SPCustomSelect.vue'
 import SPCircleChart from './components/chart/SPCircleChart.vue'
 import SPLineProgress from './components/chart/SPLineProgress.vue'
 import SPCardChart from './components/cards/SPCardChart.vue'
+import SPMiniDataTable from './components/datatable/SPMiniDataTable.vue'
 
 export default {
   components: {
@@ -126,14 +138,59 @@ export default {
     SPDataTable,
     SPCircleChart,
     SPLineProgress,
-    SPCardChart
+    SPCardChart,
+    SPMiniDataTable
   },
   data() {
     return {
       isFourColumns: 'sp-col-2',
+      activeIndex: null,
       selectOptions: [
         { title: 'Present', status: 'green', id: 1 },
         { title: 'Absent', status: 'red', id: 0 }
+      ],
+      miniRows: [
+        {
+          id: 1,
+          classe: '6ème Scientifique',
+          cours: [{ name: 'français' }, { name: 'math' }],
+          action: 'Voir'
+        },
+        {
+          id: 2,
+          classe: '5ème Scientifique',
+          cours: [{ name: 'français' }, { name: 'mathematique' }, { name: 'physique' }],
+          action: 'Voir'
+        },
+        {
+          id: 3,
+          classe: '4ème Scientifique',
+          cours: [{ name: 'français' }, { name: 'mathematique' }],
+          action: 'Voir'
+        },
+        {
+          id: 4,
+          classe: '3ème Scientifique',
+          cours: [{ name: 'français' }, { name: 'mathematique' }],
+          action: 'Voir'
+        },
+        {
+          id: 5,
+          classe: '2ème Scientifique',
+          cours: [{ name: 'français' }, { name: 'mathematique' }],
+          action: 'Voir'
+        },
+        {
+          id: 6,
+          classe: '1ère Scientifique',
+          cours: [{ name: 'français' }, { name: 'mathematique' }],
+          action: 'Voir'
+        }
+      ],
+      miniDataTable: [
+        { label: 'Classe', sortable: true, field: 'classe' },
+        { label: 'Cours assignés', sortable: false, field: 'cours assignés' },
+        { label: 'Action', sortable: false, field: 'action' }
       ],
       columns: [
         { label: 'Identité', field: 'identité' },
@@ -216,7 +273,7 @@ export default {
         { label: 'Status', field: 'status' },
         { label: 'Action', field: 'action' }
       ],
-      chartData: [0, 0, 0, 0],
+      chartData: [25, 25, 25, 25],
       financesRows: [
         {
           id: 1,
@@ -360,9 +417,21 @@ export default {
       ]
     }
   },
+  mounted() {
+    document.body.addEventListener('click', () => {
+      // this.activeIndex = null
+    })
+  },
   methods: {
     handleSelectChange(value) {
       // console.log('moi', value)
+    },
+    handleToggle(index) {
+      if (this.activeIndex !== null && this.activeIndex !== index) {
+        this.dataList[this.activeIndex].active = false
+      }
+      this.dataList[index].active = true
+      this.activeIndex = index
     }
   }
 }

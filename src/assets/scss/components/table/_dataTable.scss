@@ -1,9 +1,99 @@
 .sp-data-table {
     position: relative;
 
+    .sp-mini-data-table {
+        thead {
+            width: 100%;
+
+            tr {
+                width: 100%;
+
+                th:nth-child(1) {
+                    width: 30%;
+                }
+
+                th:nth-child(2) {
+                    width: 50%;
+                }
+
+                th:nth-child(3) {
+                    width: 20%;
+                }
+
+                th {
+                    padding: 0 10px;
+
+                    p {
+                        margin-bottom: 0;
+                        font-weight: 400;
+                    }
+
+                    .sp-title {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+                        .sp-spam-mini {
+                            display: none;
+
+                            &.sp-sort {
+                                display: block;
+
+                                svg {
+                                    width: 10px;
+                                    height: 10px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                width: 100%;
+
+                td {
+                    font-size: 12.2px;
+                    padding: 0 5px;
+                    text-align: left;
+
+                    .sp-badget {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+                        .sp-badget-table-blue {
+                            border-radius: 3px;
+                            background: #E8F8FF;
+                            flex: 0 0 0 auto;
+                            padding: 5px 10px;
+                            margin: 3px 0;
+                            width: auto;
+                            color: #41A3DF;
+                        }
+                    }
+                }
+
+                td:last-child {
+                    text-align: center;
+
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
     table {
         width: 100%;
         border-collapse: collaps;
+
+
 
         &.sp-classe-table {
 
@@ -61,7 +151,7 @@
                             font-weight: 500;
                             color: $black;
 
-                            p{
+                            p {
                                 margin-bottom: 0 !important;
                             }
                         }
