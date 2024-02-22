@@ -34,6 +34,7 @@ import SPCircleChart from './src/components/chart/SPCircleChart.vue';
 import SPLineProgress from './src/components/chart/SPLineProgress.vue';
 import SPCardChart from './src/components/cards/SPCardChart.vue';
 import SPMiniDataTable from './src/components/datatable/SPMiniDataTable.vue';
+import SPBullChat from './src/components/chat/SPBullChat.vue';
 
 
 export {
@@ -70,7 +71,8 @@ export {
     SPCircleChart,
     SPLineProgress,
     SPCardChart,
-    SPMiniDataTable
+    SPMiniDataTable,
+    SPBullChat
 }
 import SchoolapUI from './src/SchoolapUI'
 
