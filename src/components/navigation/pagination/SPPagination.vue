@@ -28,7 +28,7 @@
           :key="page"
           :class="{ active: currentPage === page }"
         >
-          <a class="page-link" href="#" @click.prevent="setPage(page)">
+          <a class="sp-page-link" href="#" @click.prevent="setPage(page)">
             {{ page }}
           </a>
         </li>
