@@ -3,7 +3,7 @@
     <nav>
       <ul class="sp-pagination-content">
         <li class="page-item" :class="{ disabled: isFirstPage }">
-          <a class="page-link" href="#" @click.prevent="setPage(currentPage - 1)">
+          <a class="sp-page-link" href="#" @click.prevent="setPage(currentPage - 1)">
             <svg
               width="28"
               height="25"
@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="page-item" :class="{ disabled: isLastPage }">
-          <a class="page-link" href="#" @click.prevent="setPage(currentPage + 1)">
+          <a class="sp-page-link" href="#" @click.prevent="setPage(currentPage + 1)">
             <svg
               width="29"
               height="25"

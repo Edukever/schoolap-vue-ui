@@ -17,9 +17,13 @@
 
             a {
                 text-decoration: none;
-                padding: .6rem 1.2rem;
+                padding: .5rem .95rem;
                 font-size: 17px;
                 color: #ABABAB;
+                display: block;
+                margin-left: -1px;
+                line-height: 1.25;                    
+                border-radius: 12px;
                 transition: all .3s;
             }
 
@@ -53,8 +57,12 @@
                 }
 
                 .sp-page-link {
+                    position: relative;
+                    display: block;
+                    padding: .5rem .75rem;
+                    margin-left: -1px;
+                    line-height: 1.25;                    
                     border-radius: 12px;
-                    padding: .5rem;
                     width: 100%;
                     background: #E5F9FF;
                 }
