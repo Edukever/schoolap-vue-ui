@@ -63,20 +63,10 @@
     </div>
     <div class="sp-bull-content">
       <div class="sp-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <slot name="content"></slot>
       </div>
       <hr class="sp-hr-color" />
-      <slot></slot>
+      <slot name="footer"></slot>
     </div>
     <SPCardOption
       :class="indexValue ? 'active' : ''"
@@ -145,7 +135,7 @@ export default {
     },
     toggleShow() {
       event.stopPropagation();
-      this.emit('toggle', this.indexValue)
+      this.$emit('toggle', this.indexValue)
     }
   }
 }
