@@ -21,8 +21,8 @@
           </svg>
         </div>
         <div class="sp-content">
-          <h2 class="sp-title">Title communique</h2>
-          <p>11 décembre 2023 à 09:22</p>
+          <h2 class="sp-title">{{ communicateTitle }}</h2>
+          <p>{{ communicateDate }}</p>
         </div>
       </div>
       <div class="sp-bull-action">
