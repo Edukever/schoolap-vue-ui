@@ -7,7 +7,10 @@
         </thead>
         <tbody>
             <template v-if="!isForClasse && !isForFinance && !isForSuiviePayement">
-                <student-body :rows="rows" />
+                <student-body :rows="rows"
+                              @edit="handleEditClick"
+                              @detail="handleDetailClick"
+                              @archive="handleArchiveClick"/>
             </template>
             <template v-if="isForClasse">
                 <classe-body :rows="rows" />
@@ -95,7 +98,17 @@ export default {
                 this.isForClasse == false
                 this.isForSuiviePayement == false
             }
-        }
+        },
+
+        handleEditClick() {
+            this.$emit('edit');
+        },
+        handleDetailClick() {
+            this.$emit('detail');
+        },
+        handleArchiveClick() {
+            this.$emit('archive');
+        },
     },
     mounted() {
         this.renderTable()

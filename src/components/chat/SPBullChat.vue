@@ -21,8 +21,8 @@
           </svg>
         </div>
         <div class="sp-content">
-          <h2 class="sp-title">Title communique</h2>
-          <p>11 décembre 2023 à 09:22</p>
+          <h2 class="sp-title">{{ communicateTitle }}</h2>
+          <p>{{ communicateDate }}</p>
         </div>
       </div>
       <div class="sp-bull-action">
@@ -63,20 +63,10 @@
     </div>
     <div class="sp-bull-content">
       <div class="sp-content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <slot name="content"></slot>
       </div>
       <hr class="sp-hr-color" />
-      <slot></slot>
+      <slot name="footer"></slot>
     </div>
     <SPCardOption
       :class="indexValue ? 'active' : ''"
@@ -145,7 +135,7 @@ export default {
     },
     toggleShow() {
       event.stopPropagation();
-      this.emit('toggle', this.indexValue)
+      this.$emit('toggle', this.indexValue)
     }
   }
 }
