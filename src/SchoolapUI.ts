@@ -50,7 +50,6 @@ interface SchoolapUIPluginOptions {}
 
 const SchoolapUI = {
   install(app: App, options?: SchoolapUIPluginOptions) {
-
     /**
      * Components registration
      * tags are kebab-case

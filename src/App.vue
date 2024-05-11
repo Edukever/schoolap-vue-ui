@@ -86,20 +86,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import SPButtonPrimary from './components/buttons/SPButtonPrimary.vue'
-import SPButtonBack from './components/buttons/SPButtonBack.vue'
-import SPButtonGoogle from './components/buttons/SPButtonGoogle.vue'
-import SPButtonIcon from './components/buttons/SPButtonIcon.vue'
-import SPTextField from './components/forms/inputs/SPTextField.vue'
-import SPSearchBar from './components/forms/inputs/SPSearchBar.vue'
-import SPRadio from './components/forms/radio/SPRadio.vue'
-import SPCheckBox from './components/forms/checkBox/SPCheckBox.vue'
-import SPTextFieldIcon from './components/forms/inputs/SPTextFieldIcon.vue'
-import SPTextarea from './components/forms/inputs/SPTextarea.vue'
-import SPSelect from './components/forms/select/SPSelect.vue'
-import SPBannerLogin from './components/banners/SPBannerLogin.vue'
 import SPSideBar from './components/navigation/sidebar/SPSideBar.vue'
 import SPCardProfilSchool from './components/cards/SPCardProfilSchool.vue'
 import SPCardPricing from './components/cards/SPCardPricing.vue'
@@ -118,30 +104,11 @@ import SPMiniDataTable from './components/datatable/SPMiniDataTable.vue'
 import SPBullChat from './components/chat/SPBullChat.vue'
 
 export default {
+  name: 'App',
   components: {
-    // HelloWorld,
-    // TheWelcome,
-    // SPButtonPrimary,
-    // SPButtonBack,
-    // SPButtonIcon,
-    // SPTextField,
-    // SPSearchBar,
-    // SPRadio,
-    // SPCheckBox,
-    // SPTextFieldIcon,
-    // SPTextarea,
-    // SPButtonGoogle,
-    // SPBannerLogin,
-    SPCustomSelect,
     SPSideBar,
     SPCardArchive,
-    SPCardProfilSchool,
-    SPCardPricing,
-    SPCardPreviewFile,
     SPDataTableGrid,
-    SPCardPresence,
-    SPCardRapportPresence,
-    SPCardRapportPresenceTwo,
     SPDataTable,
     SPCircleChart,
     SPLineProgress,

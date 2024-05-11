@@ -23,12 +23,12 @@ export default {
     props: {
         firstRoute: {
             type: Object,
-            default: ''
+            default: null
         },
 
         secondeRoute: {
             type: Object,
-            default: ''
+            default: null
         }
     }
 }
