@@ -42,7 +42,7 @@
                 </div>
                 <div class="sp-description">
                     <p class="sp-title">{{ minutes }}</p>
-                    <p class="sp-text">{{ subtitleminute }}</p>
+                    <p class="sp-text">{{ subtileminute }}</p>
                 </div>
             </div>
 
@@ -127,8 +127,12 @@ export default {
     },
     methods: {
         updateProgress() {
-            const progress = this.$refs.circle.getAttribute('data-progress');
-            this.$refs.circle.style.setProperty('--progress', progress);
+            const circle = this.$refs.circle as HTMLElement;
+            const progress = circle.getAttribute('data-progress');
+            circle.style.setProperty('--progress', progress);
+
+            // const progress = this.$refs.circle.getAttribute('data-progress');
+            // this.$refs.circle.style.setProperty('--progress', progress);
         },
         handleClick() {
             this.$emit('click');
