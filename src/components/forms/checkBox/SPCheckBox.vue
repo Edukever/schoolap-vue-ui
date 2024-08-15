@@ -21,7 +21,7 @@ export default {
     uniqueId() {
       return `radio-${Math.random().toString(36).substr(2, 9)}`
     },
-    isChecked() {
+    isChecked: {
       get() { 
         return this.modelValue
       },
