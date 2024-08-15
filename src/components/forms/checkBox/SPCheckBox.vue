@@ -11,7 +11,7 @@
 export default {
   name: 'SPCheckBox',
   props: {
-    value: Boolean,
+    modelValue: Boolean,
     label: {
       type: String
     }
@@ -25,14 +25,14 @@ export default {
 
   data() {
     return {
-      isChecked: this.value
+      isChecked: this.modelValue
     }
   },
 
   methods: {
     handleCheckboxChange() {
       this.$emit('checkbox-changed', this.isChecked)
-      this.$emit('input', this.isChecked)
+      this.$emit('update:modelValue', this.isChecked)
     }
   }
 }
