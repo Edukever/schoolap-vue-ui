@@ -22,13 +22,13 @@
         v-for="(option, index) in options"
         :key="index"
         class="option"
-        :class="{ selected: option === selectedOption, disabled: option.disabled }"
+        :class="{  disabled: option.disabled }"
         @click.stop="selectOption(option)"
       >
         <input
           type="radio"
           :disabled="option.disabled"
-          :checked="option === selectedOption"
+          :checked="false"
           hidden
         />
         <div
