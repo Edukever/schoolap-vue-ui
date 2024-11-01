@@ -1,4 +1,5 @@
-``<template>
+``
+<template>
   <div class="sp-custom-select">
     <i class="toggle icon-arrow-down" v-if="!selectedOption"></i>
     <i class="toggle icon-arrow-up" v-if="selectedOption"></i>
@@ -19,16 +20,16 @@
     <input type="checkbox" v-model="showOptions" :disabled="disabled" hidden />
     <div class="sp-options" v-show="showOptions">
       <div
-        v-for="(option, index) in options"
+        v-for="(option, index) in listOptions"
         :key="index"
         class="option"
-        :class="{  disabled: option.disabled }"
+        :class="{ selected: option === selectedOption, disabled: option.disabled }"
         @click.stop="selectOption(option)"
       >
         <input
           type="radio"
           :disabled="option.disabled"
-          :checked="false"
+          :checked="option === selectedOption"
           hidden
         />
         <div
@@ -76,8 +77,8 @@ export default {
       selectedOption: null
     }
   },
-  mounted() { 
-      this.selectedOption = this.options.find((option) => option.id == this.defaultValue)
+  mounted() {
+    this.selectedOption = this.options.find((option) => option.id == this.defaultValue)
   },
   // created() {
   //   if (this.defaultValue == 0) {
@@ -86,6 +87,11 @@ export default {
   //     this.selectedOption = this.options[0]
   //   }
   // },
+  computed: {
+    listOptions() {
+      return this.options.filter(option => this.selectedOption && option.id != this.selectedOption.id);
+    }
+  },
   methods: {
     toggleOptions() {
       if (!this.disabled) {

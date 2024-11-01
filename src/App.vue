@@ -35,33 +35,34 @@
           </div>
         </div>
         <SPDataTableGrid
-          :dataList="dataList"
-          :columnClass="isFourColumns"
-          perPage="9"
-          itemsPerPage="9"
+        :dataList="dataList"
+        :columnClass="isFourColumns"
+        perPage="9"
+        itemsPerPage="9"
         >
-          <template v-slot="{ item, index }">
-            <!-- <SPCardPresence
-              :name="item.name"
-              :item="item"
-              :index="item.id"
-              @change="handleSelectChange"
-              :attended="item.attented"
-              :id="item.id"
-              :key="item.id"
-            /> -->
-            <SPCardArchive
-              :titleFolder="item.name"
-              :subtitle="item.lastname"
-              :index="index"
-              @toggle="handleToggle(index)"
-              :indexValue="activeIndex === index"
-            />
-            <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" /> -->
-          </template>
-        </SPDataTableGrid>
-
-        <SPDataTable :rows="dataList" :columns="columns" />
+        <template v-slot="{ item, index }">
+          <!-- <SPCardPresence
+          :name="item.name"
+          :item="item"
+          :index="item.id"
+          @change="handleSelectChange"
+          :attended="item.attented"
+          :id="item.id"
+          :key="item.id"
+          /> -->
+          <SPCardArchive
+          :titleFolder="item.name"
+          :subtitle="item.lastname"
+          :index="index"
+          @toggle="handleToggle(index)"
+          :indexValue="activeIndex === index"
+          />
+          <!-- <SPCardRapportPresenceTwo :title="item.name" :item="item" :key="item.id" /> -->
+        </template>
+      </SPDataTableGrid>
+      
+      <SPDataTable :rows="dataList" :columns="columns" />
+      <SPCustomSelect :options="selectOptions" placeholder="Select an option" />
 
         <div class="mt-4">
           <p>Classe</p>
@@ -114,7 +115,8 @@ export default {
     SPLineProgress,
     SPCardChart,
     SPMiniDataTable,
-    SPBullChat
+    SPBullChat,
+    SPCustomSelect
   },
   data() {
     return {
@@ -410,7 +412,7 @@ export default {
     },
     handleEditClick() {
       console.log('edit')
-    },
+    }
   }
 }
 </script>
