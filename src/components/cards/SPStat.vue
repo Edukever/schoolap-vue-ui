@@ -1,6 +1,6 @@
 <template>
   <div class="sp-stat">
-    <router-link :to="{ name: route }" class="bloc_one">
+    <router-link :to="{ name: route }" class="bloc_one cursor-pointer">
       <h2>{{ title }}</h2>
       <div class="bloc_svg">
         <img :src="svg" />
@@ -16,7 +16,7 @@
         </ul>
       </template>
     </router-link>
-    <div class="bloc_two" @click="$emit('add')">
+    <div class="bloc_two cursor-pointer" @click="$emit('add')">
       <img :src="img_button_action" />
     </div>
   </div>
