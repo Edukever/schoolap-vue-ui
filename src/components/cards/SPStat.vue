@@ -10,7 +10,7 @@
                 <h3 class="sp_add">{{ description }}</h3>
             </template>
             <template v-else>
-                <ul class="sp-stat-list">
+                <ul class="sp-stat-list  text-dark">
                     <li>{{ number_men }}</li>
                     <li> {{ number_women }}</li>
                 </ul>
