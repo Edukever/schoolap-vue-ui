@@ -1,6 +1,6 @@
 <template>
     <div class="sp-stat">
-        <div class="bloc_one">
+        <router-link :to="route" class="bloc_one">
             <h2>{{ title }}</h2>
             <div class="bloc_svg">
                 <img :src="svg">
@@ -16,8 +16,8 @@
                 </ul>
             </template>
 
-        </div>
-        <div class="bloc_two">
+        </router-link >
+        <div class="bloc_two" @click="$emit('add')">
             <img :src="img_button_action">
         </div>
     </div>
@@ -47,6 +47,11 @@ export default {
         number_women: {
             default: '',
             type: String
+        }, 
+        route:{
+            default: '',
+            type: String,
+            required: true
         }
     }
 }
