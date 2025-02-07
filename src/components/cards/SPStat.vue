@@ -1,6 +1,6 @@
 <template>
     <div class="sp-stat">
-        <router-link :to="route" class="bloc_one cursor-pointer w-100 text-decoration-none">
+        <router-link :to="route" class="bloc_one">
             <h2>{{ title }}</h2>
             <div class="bloc_svg">
                 <img :src="svg">
@@ -10,7 +10,7 @@
                 <h3 class="sp_add">{{ description }}</h3>
             </template>
             <template v-else>
-                <ul class="sp-stat-list  text-dark">
+                <ul class="sp-stat-list">
                     <li>{{ number_men }}</li>
                     <li> {{ number_women }}</li>
                 </ul>
