@@ -1,6 +1,6 @@
 <template>
     <div class="sp-stat">
-        <router-link :to="route" class="bloc_one cursor-pointer text-decoration-none">
+        <router-link :to="route" class="bloc_one cursor-pointer w-100 text-decoration-none">
             <h2>{{ title }}</h2>
             <div class="bloc_svg">
                 <img :src="svg">
