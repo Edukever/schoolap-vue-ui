@@ -17,7 +17,7 @@
             </template>
 
         </router-link >
-        <div class="bloc_two" @click="$emit('add')">
+        <div class="bloc_two cursor-pointer" @click="$emit('add')">
             <img :src="img_button_action">
         </div>
     </div>
@@ -50,8 +50,7 @@ export default {
         }, 
         route:{
             default: '',
-            type: String,
-            required: true
+            type: String
         }
     }
 }
