@@ -54,7 +54,7 @@
       <h2 class="sp-title">{{ title }}</h2>
       <h2 class="sp-subtitle">{{ subtitle }}</h2>
       <div class="sp-content-img">
-        <img src="../../assets/img/table.png" alt="" />
+        <img :src="image" alt="" />
       </div>
 
       <div class="sp-content-error">
@@ -95,6 +95,9 @@
 </template>
 
 <script>
+import table_french from '../../assets/img/table.png';
+import table_english from '../../assets/img/table_2.png';
+import {toRefs, computed} from 'vue';
 export default {
     props:{
         title: {
@@ -114,8 +117,20 @@ export default {
         isError: {
             type: Boolean,
             default: false
+        },
+        isImageLanguage: {
+            type: Boolean,
+            default: true
         }
-    
+    },
+    setup(props, {emit}) {
+        const { isImageLanguage } = toRefs(props);
+        const image = computed(() => {
+            return isImageLanguage.value ? table_french : table_english;
+        });
+        return {
+            image
+        };
     }
 }
 </script>

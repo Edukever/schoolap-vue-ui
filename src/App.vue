@@ -81,6 +81,7 @@
             :isForSuiviePayement="'true'"
           />
         </div>
+        <SPCardPreviewFile/>
       </div>
     </main>
   </div>
@@ -116,7 +117,8 @@ export default {
     SPCardChart,
     SPMiniDataTable,
     SPBullChat,
-    SPCustomSelect
+    SPCustomSelect,
+    SPCardPreviewFile
   },
   data() {
     return {
