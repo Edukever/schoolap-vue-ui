@@ -126,7 +126,7 @@ export default {
     setup(props, {emit}) {
         const { isImageLanguage } = toRefs(props);
         const image = computed(() => {
-            return isImageLanguage.value ? table_french : table_english;
+            return isImageLanguage.value === true ? table_french : table_english;
         });
         return {
             image
